@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<de.fhg.iese.save.structure.model.component:SAVEComponentModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:de.fhg.iese.save.structure.model.component="http:///de/fhg/iese/save/structure/model/component/componentModel.ecore" name="p5" modelType="componentModel" readableModelType="Structural Model" timeCreated="2012-05-29T15:57:15.436+0200" timeModified="2012-05-29T15:57:15.436+0200">
+  <components name="Util5.java" iD="-1794375342"/>
+  <components name="Mailer5.java" iD="1637648500"/>
+</de.fhg.iese.save.structure.model.component:SAVEComponentModel>

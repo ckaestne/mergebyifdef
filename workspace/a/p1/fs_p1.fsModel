@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<de.fhg.iese.save.structure.model.fs:FSModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:de.fhg.iese.save.structure.model.component="http:///de/fhg/iese/save/structure/model/component/componentModel.ecore" xmlns:de.fhg.iese.save.structure.model.fs="http:///de/fhg/iese/save/structure/model/fsmodel.ecore" name="fs_p1" modelType="fsModel" readableModelType="Filesystem Model" timeCreated="2012-05-29T15:56:18.126+0200" timeModified="2012-05-29T15:56:18.126+0200">
+  <fSFolders iD="629" path="/">
+    <fSCompilationUnits name="Util1.java" iD="-1908891946" path="/JenkinsSample/Util1.java"/>
+    <fSCompilationUnits name="Mailer1.java" iD="1523131896" path="/JenkinsSample/Mailer1.java"/>
+  </fSFolders>
+  <sAVEFSConnector>
+    <fSToSAVEMapping key="//@fSFolders.0/@fSCompilationUnits.1">
+      <value fSElement="//@fSFolders.0/@fSCompilationUnits.1">
+        <sAVEElement xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponent" href="p1.componentModel#//@components.1"/>
+      </value>
+    </fSToSAVEMapping>
+    <fSToSAVEMapping key="//@fSFolders.0/@fSCompilationUnits.0">
+      <value fSElement="//@fSFolders.0/@fSCompilationUnits.0">
+        <sAVEElement xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponent" href="p1.componentModel#//@components.0"/>
+      </value>
+    </fSToSAVEMapping>
+  </sAVEFSConnector>
+</de.fhg.iese.save.structure.model.fs:FSModel>
