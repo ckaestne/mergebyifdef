@@ -1,0 +1,630 @@
+//#if V4 || V3 || V2 || V1 || V0
+package hudson.tasks;
+//#if V0 || V1
+import static hudson.Util.fixEmptyAndTrim;
+//#endif
+//#if V3
+import hudson.Launcher;
+import hudson.Functions;
+//#endif
+//#if V4
+import com.thoughtworks.xstream.converters.UnmarshallingContext;
+//#endif
+//#if V0 || V1 || V2 || V4
+import hudson.EnvVars;
+//#endif
+//#if V0 || V3 || V4
+import hudson.Extension;
+//#endif
+//#if V1 || V2
+import hudson.Extension;
+//#endif
+//#if V0 || V1 || V2 || V4
+import hudson.Functions;
+import hudson.Launcher;
+//#endif
+import hudson.RestrictedSince;
+import hudson.Util;
+//#if V3 || V4
+import hudson.diagnosis.OldDataMonitor;
+//#endif
+//#if V2 || V3
+import static hudson.Util.fixEmptyAndTrim;
+//#endif
+import hudson.model.AbstractBuild;
+import hudson.model.AbstractProject;
+import hudson.model.BuildListener;
+//#if V3
+import hudson.model.ParametersAction;
+//#endif
+//#if V4
+import hudson.model.Hudson;
+//#endif
+import hudson.model.User;
+import hudson.model.UserPropertyDescriptor;
+//#if V2
+import jenkins.model.Jenkins;
+//#endif
+//#if V3
+import hudson.model.Hudson;
+//#endif
+import hudson.util.FormValidation;
+import hudson.util.Secret;
+//#if V0
+import org.apache.commons.lang.StringUtils;
+//#endif
+//#if V3 || V4
+import hudson.util.XStream2;
+//#endif
+//#if V0 || V2 || V3
+import org.apache.tools.ant.types.selectors.SelectorUtils;
+import org.kohsuke.accmod.Restricted;
+//#endif
+//#if V3
+import org.kohsuke.accmod.restrictions.DoNotUse;
+//#endif
+//#if V0 || V2 || V3
+import org.kohsuke.accmod.restrictions.NoExternalUse;
+import org.kohsuke.stapler.QueryParameter;
+import org.kohsuke.stapler.StaplerRequest;
+import org.kohsuke.stapler.export.Exported;
+//#endif
+//#if V0 || V1
+import java.io.File;
+//#endif
+//#if V0 || V1 || V4
+import java.io.IOException;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+import java.util.Date;
+import java.util.Properties;
+//#endif
+//#if V0 || V1
+import java.util.logging.Level;
+//#endif
+//#if V0 || V1 || V4
+import java.util.logging.Logger;
+//#endif
+//#if V3
+import com.thoughtworks.xstream.converters.UnmarshallingContext;
+//#endif
+import javax.mail.Authenticator;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.AddressException;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+import javax.servlet.ServletException;
+//#if V0 || V1
+import org.apache.tools.ant.types.selectors.SelectorUtils;
+import org.kohsuke.accmod.Restricted;
+import org.kohsuke.accmod.restrictions.NoExternalUse;
+//#endif
+//#if V2 || V3
+import java.io.File;
+import java.io.IOException;
+import java.util.Date;
+import java.util.Properties;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+//#endif
+//#if V2 || V3 || V4
+import net.sf.json.JSONObject;
+//#endif
+//#if V4
+import org.apache.commons.lang3.StringUtils;
+//#endif
+//#if V0 || V1 || V4
+import org.kohsuke.stapler.QueryParameter;
+import org.kohsuke.stapler.StaplerRequest;
+import org.kohsuke.stapler.export.Exported;
+//#endif
+//#if V0 || V1
+import jenkins.model.Jenkins;
+import net.sf.json.JSONObject;
+//#endif
+//#if V4
+import static hudson.Util.fixEmptyAndTrim;
+//#endif
+public class Mailer extends Notifier {
+    protected static final Logger LOGGER = Logger.getLogger(Mailer.class.getName());
+    public String recipients;
+    public boolean dontNotifyEveryUnstableBuild;
+    public boolean sendToIndividuals;
+//#if V0 || V1 || V2
+    @Override
+    public boolean perform(AbstractBuild<?,?> build, Launcher launcher, BuildListener listener) throws IOException, InterruptedException {
+//#endif
+//#if V4
+    public String getRecipients() {
+        return recipients;
+//#endif
+//#if V0 || V1 || V2
+        if(debug)
+            listener.getLogger().println("Running mailer");
+        EnvVars env = build.getEnvironment(listener);
+        String recip = env.expand(recipients);
+        return new MailSender(recip, dontNotifyEveryUnstableBuild, sendToIndividuals, descriptor().getCharset()) {
+            @Override
+            public boolean artifactMatches(String path, AbstractBuild<?,?> build) {
+                ArtifactArchiver aa = build.getProject().getPublishersList().get(ArtifactArchiver.class);
+                if (aa == null) {
+                    LOGGER.finer("No ArtifactArchiver found");
+                    return false;
+                }
+                String artifacts = aa.getArtifacts();
+                for (String include : artifacts.split("[, ]+")) {
+                    String pattern = include.replace(File.separatorChar, '/');
+                    if (pattern.endsWith("/")) {
+                        pattern += "**";
+//#endif
+//#if V0 || V1 || V2 || V4
+                    }
+//#endif
+//#if V4
+    public boolean isDontNotifyEveryUnstableBuild() {
+        return dontNotifyEveryUnstableBuild;
+//#endif
+//#if V0 || V1 || V2
+                    if (SelectorUtils.matchPath(pattern, path)) {
+                        LOGGER.log(Level.FINER, "DescriptorImpl.artifactMatches true for {0} against {1}", new Object[] {path, pattern});
+                        return true;
+//#endif
+//#if V0 || V1 || V2 || V4
+                    }
+//#endif
+//#if V4
+    public boolean isSendToIndividuals() {
+        return sendToIndividuals;
+//#endif
+//#if V0 || V1 || V2 || V4
+                }
+//#endif
+//#if V3 || V4
+    private transient String from;
+    private transient String subject;
+    private transient boolean failureOnly;
+    private transient String charset;
+    @Override
+//#endif
+//#if V3
+    public boolean perform(AbstractBuild<?,?> build, Launcher launcher, BuildListener listener) throws InterruptedException {
+        if(debug)
+//#endif
+//#if V4
+    public boolean perform(AbstractBuild<?, ?> build, Launcher launcher, BuildListener listener)
+        throws IOException, InterruptedException {
+        if (debug) {
+//#endif
+//#if V3 || V4
+            listener.getLogger().println("Running mailer");
+//#endif
+//#if V3
+        ParametersAction parameters = build.getAction(ParametersAction.class);
+        if (parameters!=null)
+            recipients = parameters.substitute(build, recipients);
+        return new MailSender(recipients,dontNotifyEveryUnstableBuild,sendToIndividuals, descriptor().getCharset()) {
+            @Override
+            public boolean artifactMatches(String path, AbstractBuild<?,?> build) {
+                ArtifactArchiver aa = build.getProject().getPublishersList().get(ArtifactArchiver.class);
+                if (aa == null) {
+                    LOGGER.finer("No ArtifactArchiver found");
+                    return false;
+                }
+                String artifacts = aa.getArtifacts();
+                for (String include : artifacts.split("[, ]+")) {
+                    String pattern = include.replace(File.separatorChar, '/');
+                    if (pattern.endsWith("/")) {
+                        pattern += "**";
+                    }
+                    if (SelectorUtils.matchPath(pattern, path)) {
+                        LOGGER.log(Level.FINER, "DescriptorImpl.artifactMatches true for {0} against {1}", new Object[] {path, pattern});
+                        return true;
+                    }
+                }
+//#endif
+//#if V0 || V1 || V2 || V3
+                LOGGER.log(Level.FINER, "DescriptorImpl.artifactMatches for {0} matched none of {1}", new Object[] {path, artifacts});
+                return false;
+//#endif
+//#if V0 || V1 || V2 || V4
+            }
+//#endif
+//#if V3
+            }
+//#endif
+//#if V0 || V1 || V2 || V3
+        }.execute(build,listener);
+//#endif
+//#if V4
+        EnvVars env = build.getEnvironment(listener);
+        String recip = env.expand(recipients);
+        return new MailSender(recip, dontNotifyEveryUnstableBuild, sendToIndividuals,
+            descriptor().getCharset()).execute(build, listener);
+//#endif
+    }
+    public BuildStepMonitor getRequiredMonitorService() {
+        return BuildStepMonitor.NONE;
+    }
+//#if V0 || V1 || V2 || V3
+    @Restricted(NoExternalUse.class)
+//#endif
+//#if V4
+    @Deprecated
+//#endif
+    @RestrictedSince("1.355")
+    public static DescriptorImpl DESCRIPTOR;
+    public static DescriptorImpl descriptor() {
+//#if V0 || V1 || V2
+        return Jenkins.getInstance().getDescriptorByType(Mailer.DescriptorImpl.class);
+//#endif
+//#if V3 || V4
+        return Hudson.getInstance().getDescriptorByType(Mailer.DescriptorImpl.class);
+//#endif
+    }
+    @Extension
+    public static final class DescriptorImpl extends BuildStepDescriptor<Publisher> {
+        private String defaultSuffix;
+//#if V0 || V1 || V2 || V3
+        private String hudsonUrl;
+//#endif
+//#if V4
+        private String hudsonUrl = "http://localhost:8080/";
+//#endif
+        private String smtpAuthUsername;
+        private Secret smtpAuthPassword;
+        private String adminAddress;
+//#if V0
+        private String replyToAddress;
+//#endif
+        private String smtpHost;
+        private boolean useSsl;
+        private String smtpPort;
+        private String charset;
+        private static transient int testEmailCount = 0;
+        public DescriptorImpl() {
+            load();
+            DESCRIPTOR = this;
+        }
+        public String getDisplayName() {
+            return Messages.Mailer_DisplayName();
+        }
+        @Override
+        public String getHelpFile() {
+            return "/help/project-config/mailer.html";
+        }
+        public String getDefaultSuffix() {
+            return defaultSuffix;
+        }
+//#if V0
+        public String getReplyToAddress() {
+            return replyToAddress;
+        }
+        public void setReplyToAddress(String address) {
+            this.replyToAddress = Util.fixEmpty(address);
+        }
+//#endif
+        public Session createSession() {
+            return createSession(smtpHost,smtpPort,useSsl,smtpAuthUsername,smtpAuthPassword);
+        }
+        private static Session createSession(String smtpHost, String smtpPort, boolean useSsl, String smtpAuthUserName, Secret smtpAuthPassword) {
+            smtpPort = fixEmptyAndTrim(smtpPort);
+            smtpAuthUserName = fixEmptyAndTrim(smtpAuthUserName);
+            Properties props = new Properties(System.getProperties());
+//#if V4
+            props.put("mail.transport.protocol", "smtp");
+//#endif
+            if(fixEmptyAndTrim(smtpHost)!=null)
+                props.put("mail.smtp.host",smtpHost);
+            if (smtpPort!=null) {
+                props.put("mail.smtp.port", smtpPort);
+            }
+            if (useSsl) {
+            	if (props.getProperty("mail.smtp.socketFactory.port") == null) {
+                    String port = smtpPort==null?"465":smtpPort;
+                    props.put("mail.smtp.port", port);
+                    props.put("mail.smtp.socketFactory.port", port);
+            	}
+            	if (props.getProperty("mail.smtp.socketFactory.class") == null) {
+            		props.put("mail.smtp.socketFactory.class","javax.net.ssl.SSLSocketFactory");
+            	}
+				props.put("mail.smtp.socketFactory.fallback", "false");
+			}
+            if(smtpAuthUserName!=null)
+                props.put("mail.smtp.auth","true");
+            props.put("mail.smtp.timeout","60000");
+            props.put("mail.smtp.connectiontimeout","60000");
+            return Session.getInstance(props,getAuthenticator(smtpAuthUserName,Secret.toString(smtpAuthPassword)));
+        }
+        private static Authenticator getAuthenticator(final String smtpAuthUserName, final String smtpAuthPassword) {
+            if(smtpAuthUserName==null)    return null;
+            return new Authenticator() {
+                @Override
+                protected PasswordAuthentication getPasswordAuthentication() {
+                    return new PasswordAuthentication(smtpAuthUserName,smtpAuthPassword);
+                }
+            };
+        }
+        @Override
+        public boolean configure(StaplerRequest req, JSONObject json) throws FormException {
+            smtpHost = nullify(json.getString("smtpServer"));
+            setAdminAddress(json.getString("adminAddress"));
+//#if V0
+            setReplyToAddress(json.getString("replyToAddress"));
+//#endif
+            defaultSuffix = nullify(json.getString("defaultSuffix"));
+            String url = nullify(json.getString("url"));
+            if(url!=null && !url.endsWith("/"))
+                url += '/';
+            hudsonUrl = url;
+            if(json.has("useSMTPAuth")) {
+                JSONObject auth = json.getJSONObject("useSMTPAuth");
+                smtpAuthUsername = nullify(auth.getString("smtpAuthUserName"));
+                smtpAuthPassword = Secret.fromString(nullify(auth.getString("smtpAuthPassword")));
+            } else {
+                smtpAuthUsername = null;
+                smtpAuthPassword = null;
+            }
+            smtpPort = nullify(json.getString("smtpPort"));
+            useSsl = json.getBoolean("useSsl");
+            charset = json.getString("charset");
+            if (charset == null || charset.length() == 0)
+            	charset = "UTF-8";
+            save();
+            return true;
+        }
+        private String nullify(String v) {
+            if(v!=null && v.length()==0)    v=null;
+            return v;
+        }
+        public String getSmtpServer() {
+            return smtpHost;
+        }
+        public String getAdminAddress() {
+            String v = adminAddress;
+            if(v==null)     v = Messages.Mailer_Address_Not_Configured();
+            return v;
+        }
+        public String getUrl() {
+            return hudsonUrl;
+        }
+        public String getSmtpAuthUserName() {
+            return smtpAuthUsername;
+        }
+        public String getSmtpAuthPassword() {
+            if (smtpAuthPassword==null) return null;
+            return Secret.toString(smtpAuthPassword);
+        }
+        public boolean getUseSsl() {
+        	return useSsl;
+        }
+        public String getSmtpPort() {
+        	return smtpPort;
+        }
+        public String getCharset() {
+        	String c = charset;
+        	if (c == null || c.length() == 0)	c = "UTF-8";
+        	return c;
+        }
+        public void setDefaultSuffix(String defaultSuffix) {
+            this.defaultSuffix = defaultSuffix;
+        }
+        public void setHudsonUrl(String hudsonUrl) {
+            this.hudsonUrl = hudsonUrl;
+        }
+        public void setAdminAddress(String adminAddress) {
+            if(adminAddress.startsWith("\"") && adminAddress.endsWith("\"")) {
+                adminAddress = adminAddress.substring(1,adminAddress.length()-1);
+            }
+            this.adminAddress = adminAddress;
+        }
+        public void setSmtpHost(String smtpHost) {
+            this.smtpHost = smtpHost;
+        }
+        public void setUseSsl(boolean useSsl) {
+            this.useSsl = useSsl;
+        }
+        public void setSmtpPort(String smtpPort) {
+            this.smtpPort = smtpPort;
+        }
+        public void setCharset(String chaset) {
+            this.charset = chaset;
+        }
+        public void setSmtpAuth(String userName, String password) {
+            this.smtpAuthUsername = userName;
+            this.smtpAuthPassword = Secret.fromString(password);
+        }
+        @Override
+        public Publisher newInstance(StaplerRequest req, JSONObject formData) {
+            Mailer m = new Mailer();
+            req.bindParameters(m,"mailer_");
+            m.dontNotifyEveryUnstableBuild = req.getParameter("mailer_notifyEveryUnstableBuild")==null;
+            if(hudsonUrl==null) {
+                hudsonUrl = Functions.inferHudsonURL(req);
+                save();
+            }
+            return m;
+        }
+        public FormValidation doCheckUrl(@QueryParameter String value) {
+            if(value.startsWith("http://localhost"))
+                return FormValidation.warning(Messages.Mailer_Localhost_Error());
+            return FormValidation.ok();
+        }
+        public FormValidation doAddressCheck(@QueryParameter String value) {
+            try {
+                new InternetAddress(value);
+                return FormValidation.ok();
+            } catch (AddressException e) {
+                return FormValidation.error(e.getMessage());
+            }
+        }
+        public FormValidation doCheckSmtpServer(@QueryParameter String value) {
+            try {
+                if (fixEmptyAndTrim(value)!=null)
+                    InetAddress.getByName(value);
+                return FormValidation.ok();
+            } catch (UnknownHostException e) {
+                return FormValidation.error(Messages.Mailer_Unknown_Host_Name()+value);
+            }
+        }
+        public FormValidation doCheckAdminAddress(@QueryParameter String value) {
+            return doAddressCheck(value);
+        }
+        public FormValidation doCheckDefaultSuffix(@QueryParameter String value) {
+            if (value.matches("@[A-Za-z0-9.\\-]+") || fixEmptyAndTrim(value)==null)
+                return FormValidation.ok();
+            else
+                return FormValidation.error(Messages.Mailer_Suffix_Error());
+        }
+        public FormValidation doSendTestMail(
+                @QueryParameter String smtpServer, @QueryParameter String adminAddress, @QueryParameter boolean useSMTPAuth,
+                @QueryParameter String smtpAuthUserName, @QueryParameter String smtpAuthPassword,
+//#if V0 || V1
+                @QueryParameter boolean useSsl, @QueryParameter String smtpPort, @QueryParameter String charset,
+                @QueryParameter String sendTestMailTo) throws IOException, ServletException, InterruptedException {
+//#endif
+//#if V2 || V3 || V4
+                @QueryParameter boolean useSsl, @QueryParameter String smtpPort) throws IOException, ServletException, InterruptedException {
+//#endif
+            try {
+                if (!useSMTPAuth)   smtpAuthUserName = smtpAuthPassword = null;
+//#if V0 || V1 || V2 || V3
+                MimeMessage msg = new MimeMessage(createSession(smtpServer,smtpPort,useSsl,smtpAuthUserName,Secret.fromString(smtpAuthPassword)));
+//#endif
+//#if V0 || V1
+                msg.setSubject(Messages.Mailer_TestMail_Subject(++testEmailCount), charset);
+                msg.setText(Messages.Mailer_TestMail_Content(testEmailCount, Jenkins.getInstance().getDisplayName()), charset);
+//#endif
+//#if V4
+                Session session = createSession(smtpServer, smtpPort, useSsl, smtpAuthUserName,
+                    Secret.fromString(smtpAuthPassword));
+                MimeMessage msg = new HudsonMimeMessage(session);
+//#endif
+//#if V2 || V3 || V4
+                msg.setSubject("Test email #" + ++testEmailCount);
+//#endif
+//#if V2
+                msg.setContent("This is test email #" + testEmailCount + " sent from " + Jenkins.getInstance().getDisplayName(), "text/plain");
+//#endif
+//#if V3 || V4
+                msg.setContent("This is test email #" + testEmailCount + " sent from Hudson Continuous Integration server.", "text/plain");
+//#endif
+                msg.setFrom(new InternetAddress(adminAddress));
+//#if V0
+                if (StringUtils.isNotBlank(replyToAddress)) {
+                    msg.setHeader("Reply-To", replyToAddress);
+                }
+//#endif
+                msg.setSentDate(new Date());
+//#if V0 || V1
+                msg.setRecipient(Message.RecipientType.TO, new InternetAddress(sendTestMailTo));
+//#endif
+//#if V2 || V3 || V4
+                msg.setRecipient(Message.RecipientType.TO, new InternetAddress(adminAddress));
+//#endif
+//#if V0 || V1 || V2 || V3
+                Transport.send(msg);                
+//#endif
+//#if V0 || V1 || V2
+                return FormValidation.ok(Messages.Mailer_EmailSentSuccessfully());
+//#endif
+//#if V4
+                send(smtpServer, smtpAuthUserName, smtpAuthPassword, smtpPort, (HudsonMimeMessage) msg);
+//#endif
+//#if V3 || V4
+                return FormValidation.ok("Email was successfully sent");
+//#endif
+            } catch (MessagingException e) {
+//#if V0 || V1 || V2
+                return FormValidation.errorWithMarkup("<p>"+Messages.Mailer_FailedToSendEmail()+"</p><pre>"+Util.escape(Functions.printThrowable(e))+"</pre>");
+//#endif
+//#if V3 || V4
+                return FormValidation.errorWithMarkup("<p>Failed to send out e-mail</p><pre>"+Util.escape(Functions.printThrowable(e))+"</pre>");
+//#endif
+//#if V0 || V1 || V3 || V4
+            }
+        }
+//#endif
+//#if V4
+        public void send(HudsonMimeMessage msg) throws MessagingException {
+            send(smtpHost, smtpAuthUsername, Secret.toString(smtpAuthPassword), smtpPort, msg);
+        }
+        public static void send(String smtpServer, String smtpAuthUserName, String smtpAuthPassword, String smtpPort,
+                                HudsonMimeMessage msg) throws MessagingException {
+            if (null != msg && null !=msg.getSession()) {
+                Session session = msg.getSession();
+                Transport t = null != session.getProperty("mail.transport.protocol") ?
+                    session.getTransport() : session.getTransport("smtp");
+                smtpPort = fixEmptyAndTrim(smtpPort);
+                int port = -1;
+                if (StringUtils.isNumeric(smtpPort)) {
+                    port = Integer.parseInt(smtpPort);
+                }
+                t.connect(smtpServer, port, smtpAuthUserName, smtpAuthPassword);
+                msg.saveChanges();
+                t.sendMessage(msg, msg.getAllRecipients());
+                t.close();
+//#endif
+//#if V2 || V4
+            }
+        }
+//#endif
+        public boolean isApplicable(Class<? extends AbstractProject> jobType) {
+            return true;
+        }
+    }
+    public static class UserProperty extends hudson.model.UserProperty {
+        private final String emailAddress;
+        public UserProperty(String emailAddress) {
+            this.emailAddress = emailAddress;
+        }
+        @Exported
+        public String getAddress() {
+//#if V0
+            if(hasExplicitlyConfiguredAddress())
+//#endif
+//#if V1
+            if(Util.fixEmptyAndTrim(emailAddress)!=null)
+//#endif
+//#if V2 || V3 || V4
+            if(emailAddress!=null)
+//#endif
+                return emailAddress;
+            return MailAddressResolver.resolve(user);
+        }
+//#if V0
+        public boolean hasExplicitlyConfiguredAddress() {
+            return Util.fixEmptyAndTrim(emailAddress)!=null;
+        }
+//#endif
+        @Extension
+        public static final class DescriptorImpl extends UserPropertyDescriptor {
+            public String getDisplayName() {
+                return Messages.Mailer_UserProperty_DisplayName();
+            }
+            public UserProperty newInstance(User user) {
+                return new UserProperty(null);
+            }
+            @Override
+            public UserProperty newInstance(StaplerRequest req, JSONObject formData) throws FormException {
+                return new UserProperty(req.getParameter("email.address"));
+            }
+        }
+    }
+    public static boolean debug = false;
+//#if V3 || V4
+    public static class ConverterImpl extends XStream2.PassthruConverter<Mailer> {
+        public ConverterImpl(XStream2 xstream) { super(xstream); }
+        @Override protected void callback(Mailer m, UnmarshallingContext context) {
+            if (m.from != null || m.subject != null || m.failureOnly || m.charset != null)
+                OldDataMonitor.report(context, "1.10");
+        }
+    }
+//#endif
+}
+//#endif
