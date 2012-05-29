@@ -1,0 +1,6 @@
+run.sh
+target/
+project/target/
+project/project/
+.idea/
+.idea_modules/
