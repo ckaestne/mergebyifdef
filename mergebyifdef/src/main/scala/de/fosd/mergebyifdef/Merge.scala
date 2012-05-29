@@ -14,11 +14,11 @@ object Merge extends App {
 
   var files: Array[List[String]] = Array()
   var outputWriter: FileWriter = null
-  val allFiles=(0 to (numBranches-1)).toSet
-  var lastFE:Set[Int]= allFiles
+  val allFiles = (0 to (numBranches - 1)).toSet
+  var lastFE: Set[Int] = allFiles
 
-  def write(s:String) {
-    outputWriter.write(s+"\n")
+  def write(s: String) {
+    outputWriter.write(s + "\n")
   }
 
   for (line <- lines) {
@@ -27,27 +27,32 @@ object Merge extends App {
       "ignoring line"
     else if (v(0) != "") {
       files = v.take(numBranches).map(filename => scala.io.Source.fromFile(filename).getLines().toList)
-      if (outputWriter != null) outputWriter.close()
-      outputWriter = new FileWriter("out/"+v.head + ".merged")
+      if (outputWriter != null) {
+        write("//#endif"); outputWriter.close()
+      }
+      outputWriter = new FileWriter("out/" + v.head + ".merged")
+      write("//#if " + allFiles.map("V" + _).mkString(" || "))
     } else {
       val offsets = v.drop(numBranches)
-      val (line,fileidx)=offsets.zip(0 to (numBranches-1)).filter(_._1!="").head
-      val fileidxs=offsets.zip(0 to (numBranches-1)).filter(_._1!="").map(_._2)
+      val (line, fileidx) = offsets.zip(0 to (numBranches - 1)).filter(_._1 != "").head
+      val fileidxs = offsets.zip(0 to (numBranches - 1)).filter(_._1 != "").map(_._2)
 
       if (lastFE != fileidxs.toSet) {
-        if (lastFE!=allFiles)
-          write("//endif")
-        lastFE=fileidxs.toSet
-        if (lastFE!=allFiles)
-          write("//if "+fileidxs.map("V"+_).mkString(" || "))
+        if (lastFE != allFiles)
+          write("//#endif")
+        lastFE = fileidxs.toSet
+        if (lastFE != allFiles)
+          write("//#if " + fileidxs.map("V" + _).mkString(" || "))
       }
 
-      write(files(fileidx)(line.toInt-1))
+      write(files(fileidx)(line.toInt - 1))
     }
 
   }
 
-  if (outputWriter != null) outputWriter.close()
+  if (outputWriter != null) {
+    write("//#endif"); outputWriter.close()
+  }
 
 
 }
