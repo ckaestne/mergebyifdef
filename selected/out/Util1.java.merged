@@ -1037,15 +1037,8 @@ public class Util {
 //#if V1 || V2 || V4
         return buf.toString();
     }
-    /**
 //#endif
 //#if V4
-     * Methods acts as {@link #xmlEscape(String)} method with only difference that it also escapes
-     * '\n', '\r' symbols
-     *
-     * @param text string to escape
-     * @return escaped string.
-     */
     public static String escapeString(String text) {
         StringBuilder buf = new StringBuilder(text.length() + 64);
         for (int i = 0; i < text.length(); i++) {
@@ -1075,13 +1068,6 @@ public class Util {
 //#if V0 || V3 || V4
         return buf.toString();
     }
-//#endif
-//#if V0 || V4
-    /**
-//#endif
-//#if V0 || V1 || V2 || V4
-     * Creates an empty file.
-     */
 //#endif
     public static void touch(File file) throws IOException {
         new FileOutputStream(file).close();
@@ -1252,16 +1238,6 @@ public class Util {
         return r;
     }
 //#if V0 || V1 || V2 || V4
-    /**
-     * Creates Ant {@link FileSet} with the base dir and include pattern.
-     *
-     * <p>
-     * The difference with this and using {@link FileSet#setIncludes(String)}
-     * is that this method doesn't treat whitespace as a pattern separator,
-     * which makes it impossible to use space in the file path.
-     *
-     * @param includes
-     *      String like "foo/bar/*.xml" Multiple patterns can be separated
 //#endif
     public static FileSet createFileSet(File baseDir, String includes, String excludes) {
         FileSet fs = new FileSet();
