@@ -1,7 +1,7 @@
-# 1 "Util1.java.merged"
-# 1 "<built-in>"
-# 1 "<command-line>"
-# 1 "Util1.java.merged"
+
+
+
+
 
 package hudson;
 
@@ -59,7 +59,7 @@ import org.apache.commons.lang3.time.FastDateFormat;
 
 
 import org.apache.commons.io.IOUtils;
-# 66 "Util1.java.merged"
+
 import org.kohsuke.stapler.Stapler;
 
 
@@ -342,7 +342,7 @@ public class Util {
         if (!Functions.isWindows()) {
 
         try {
-# 360 "Util1.java.merged"
+
                 NativeUtils.getInstance().makeFileWritable(f);
             } catch (NativeAccessException exc) {
                 LOGGER.log(Level.FINE, "Failed to chmod(2) " + f, exc);
@@ -355,7 +355,7 @@ public class Util {
     }
 
     public static void deleteRecursive(File dir) throws IOException {
-# 383 "Util1.java.merged"
+
         if (!isSymlink(dir)) {
 
 
@@ -947,7 +947,7 @@ public class Util {
 
 
                 buf.append("&#039;");
-# 982 "Util1.java.merged"
+
             } else if (ch == ' ') {
 
 
@@ -1006,7 +1006,7 @@ public class Util {
 
         return buf.toString();
     }
-# 1049 "Util1.java.merged"
+
     public static String escapeString(String text) {
         StringBuilder buf = new StringBuilder(text.length() + 64);
         for (int i = 0; i < text.length(); i++) {
@@ -1036,7 +1036,7 @@ public class Util {
 
         return buf.toString();
     }
-# 1086 "Util1.java.merged"
+
     public static void touch(File file) throws IOException {
         new FileOutputStream(file).close();
     }
@@ -1205,11 +1205,110 @@ public class Util {
 
         return r;
     }
-# 1422 "Util1.java.merged"
-                                                                          )
-                        return null;
-                    throw new IOException("Failed to readlink "+link+" error="+ err+" "+ LIBC.strerror(err));
 
+
+    public static FileSet createFileSet(File baseDir, String includes, String excludes) {
+        FileSet fs = new FileSet();
+        fs.setDir(baseDir);
+        fs.setProject(new Project());
+        StringTokenizer tokens;
+        tokens = new StringTokenizer(includes,",");
+        while(tokens.hasMoreTokens()) {
+            String token = tokens.nextToken().trim();
+            fs.createInclude().setName(token);
+        }
+        if(excludes!=null) {
+            tokens = new StringTokenizer(excludes,",");
+            while(tokens.hasMoreTokens()) {
+                String token = tokens.nextToken().trim();
+                fs.createExclude().setName(token);
+            }
+        }
+        return fs;
+    }
+    public static FileSet createFileSet(File baseDir, String includes) {
+        return createFileSet(baseDir,includes,null);
+    }
+    public static void createSymlink(File baseDir, String targetPath, String symlinkPath, TaskListener listener) throws InterruptedException {
+
+
+
+
+        if (Functions.isWindows() || NO_SYMLINK) {
+            return;
+        }
+
+        try {
+            String errmsg = "";
+            File symlinkFile = new File(baseDir, symlinkPath);
+            if (!symlinkFile.delete() && symlinkFile.exists())
+
+            {
+
+                new LocalProc(new String[]{"rm","-rf", symlinkPath},new String[0],listener.getLogger(), baseDir).join();
+
+                    }
+
+            boolean success = false;
+            try {
+                success = NativeUtils.getInstance().createSymlink(targetPath, baseDir);
+            } catch (NativeAccessException ex) {
+                errmsg = "Native function mod failed" + NativeUtils.getInstance().getLastUnixError();
+
+
+                }
+
+            if (!success) {
+                success = new LocalProc(new String[]{
+
+                    "ln","-s", targetPath, symlinkPath},
+
+
+
+
+                        new String[0], listener.getLogger(), baseDir).join() == 0;
+
+
+            }
+
+
+
+
+
+
+            if (!success) {
+                listener.getLogger().println(String.format("ln -s %s %s failed: %s", targetPath, symlinkFile, errmsg));
+            }
+
+        } catch (IOException e) {
+            PrintStream log = listener.getLogger();
+
+
+
+
+            log.printf("ln %s %s failed\n",targetPath, new File(baseDir, symlinkPath));
+
+            Util.displayIOException(e,listener);
+            e.printStackTrace( log );
+        }
+    }
+
+
+
+
+
+
+
+    public static void chmod(File f, int mask, boolean tryNative) {
+        if (Functions.isWindows()) {
+            return;
+
+
+    }
+
+        if (tryNative) {
+
+        try {
 
                 NativeUtils.getInstance().chmod(f, mask);
             } catch (NativeAccessException exc) {
@@ -1217,7 +1316,7 @@ public class Util {
                 _chmodAnt(f, mask);
 
                 }
-# 1441 "Util1.java.merged"
+
         } else {
             _chmodAnt(f, mask);
 
@@ -1271,7 +1370,7 @@ public class Util {
         }
     }
     public static String wrapToErrorSpan(String s) {
-# 1507 "Util1.java.merged"
+
         s = "<span class=error><img src='"
                 + Stapler.getCurrentRequest().getContextPath() + Hudson.RESOURCE_PATH
                 + "/images/none.gif' height=16 width=1>" + s + "</span>";
@@ -1299,7 +1398,7 @@ public class Util {
     public static File changeExtension(File dst, String ext) {
         String p = dst.getPath();
         int pos = p.lastIndexOf('.');
-# 1542 "Util1.java.merged"
+
         if (pos < 0) {
             return new File(p + ext);
         } else {

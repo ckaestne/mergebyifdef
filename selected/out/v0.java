@@ -1,7 +1,7 @@
-// 1 "Util1.java.merged"
-// 1 "<built-in>"
-// 1 "<command-line>"
-// 1 "Util1.java.merged"
+# 1 "Util1.java.merged"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "Util1.java.merged"
 
 package hudson;
 
@@ -13,7 +13,7 @@ import hudson.Proc.LocalProc;
 import hudson.model.TaskListener;
 
 import hudson.os.PosixAPI;
-// 22 "Util1.java.merged"
+# 22 "Util1.java.merged"
 import hudson.util.IOException2;
 import hudson.util.QuotedStringTokenizer;
 import hudson.util.VariableResolver;
@@ -21,7 +21,7 @@ import hudson.util.VariableResolver;
 import jenkins.model.Jenkins;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang.time.FastDateFormat;
-// 40 "Util1.java.merged"
+# 40 "Util1.java.merged"
 import org.apache.tools.ant.BuildException;
 import org.apache.tools.ant.Project;
 
@@ -31,7 +31,7 @@ import org.apache.tools.ant.taskdefs.Chmod;
 import org.apache.tools.ant.taskdefs.Copy;
 
 import org.apache.tools.ant.types.FileSet;
-// 60 "Util1.java.merged"
+# 60 "Util1.java.merged"
 import org.jruby.ext.posix.FileStat;
 import org.jruby.ext.posix.POSIX;
 
@@ -46,7 +46,7 @@ import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
 
 import java.io.*;
-// 97 "Util1.java.merged"
+# 97 "Util1.java.merged"
 import java.net.InetAddress;
 
 
@@ -70,14 +70,14 @@ import java.text.NumberFormat;
 import java.text.ParseException;
 
 import java.util.*;
-// 140 "Util1.java.merged"
+# 140 "Util1.java.merged"
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import static hudson.util.jna.GNUCLibrary.LIBC;
-// 155 "Util1.java.merged"
+# 155 "Util1.java.merged"
 public class Util {
     private static final long ONE_SECOND_MS = 1000;
     private static final long ONE_MINUTE_MS = 60 * ONE_SECOND_MS;
@@ -278,7 +278,7 @@ public class Util {
             posix.chmod(path, stat.mode()|0200);
         } catch (Throwable t) {
             LOGGER.log(Level.FINE,"Failed to chmod(2) "+f,t);
-// 365 "Util1.java.merged"
+# 365 "Util1.java.merged"
         }
     }
 
@@ -500,7 +500,7 @@ public class Util {
     public static String nullify(String v) {
 
         return fixEmpty(v);
-// 598 "Util1.java.merged"
+# 598 "Util1.java.merged"
     }
     public static String removeTrailingSlash(String s) {
 
@@ -883,7 +883,7 @@ public class Util {
 
 
             if(ch==' ') {
-// 989 "Util1.java.merged"
+# 989 "Util1.java.merged"
                 char nextCh = i+1 < text.length() ? text.charAt(i+1) : 0;
                 buf.append(nextCh==' ' ? "&nbsp;" : " ");
 
@@ -921,7 +921,7 @@ public class Util {
                 buf.append("&amp;");
 
             else
-// 1069 "Util1.java.merged"
+# 1069 "Util1.java.merged"
                 buf.append(ch);
         }
 
@@ -931,7 +931,7 @@ public class Util {
 
         return buf.toString();
     }
-// 1086 "Util1.java.merged"
+# 1086 "Util1.java.merged"
     public static void touch(File file) throws IOException {
         new FileOutputStream(file).close();
     }
@@ -957,7 +957,7 @@ public class Util {
 
         if(s==null) return "";
         else return s;
-// 1122 "Util1.java.merged"
+# 1122 "Util1.java.merged"
     }
 
 
@@ -1048,7 +1048,7 @@ public class Util {
 
             if(first) first=false;
             else buf.append(separator);
-// 1220 "Util1.java.merged"
+# 1220 "Util1.java.merged"
             buf.append(s);
         }
         return buf.toString();
@@ -1083,8 +1083,151 @@ public class Util {
 
         return r;
     }
-// 1422 "Util1.java.merged"
-                                                                          )
+
+
+    public static FileSet createFileSet(File baseDir, String includes, String excludes) {
+        FileSet fs = new FileSet();
+        fs.setDir(baseDir);
+        fs.setProject(new Project());
+        StringTokenizer tokens;
+        tokens = new StringTokenizer(includes,",");
+        while(tokens.hasMoreTokens()) {
+            String token = tokens.nextToken().trim();
+            fs.createInclude().setName(token);
+        }
+        if(excludes!=null) {
+            tokens = new StringTokenizer(excludes,",");
+            while(tokens.hasMoreTokens()) {
+                String token = tokens.nextToken().trim();
+                fs.createExclude().setName(token);
+            }
+        }
+        return fs;
+    }
+    public static FileSet createFileSet(File baseDir, String includes) {
+        return createFileSet(baseDir,includes,null);
+    }
+    public static void createSymlink(File baseDir, String targetPath, String symlinkPath, TaskListener listener) throws InterruptedException {
+
+        if(Functions.isWindows() || NO_SYMLINK) return;
+
+
+
+
+
+
+        try {
+            String errmsg = "";
+            File symlinkFile = new File(baseDir, symlinkPath);
+            if (!symlinkFile.delete() && symlinkFile.exists())
+
+
+
+                new LocalProc(new String[]{"rm","-rf", symlinkPath},new String[0],listener.getLogger(), baseDir).join();
+
+            Integer r=null;
+
+
+
+
+
+            if (!SYMLINK_ESCAPEHATCH) {
+                try {
+                    r = LIBC.symlink(targetPath,symlinkFile.getAbsolutePath());
+                    if (r!=0) {
+                        r = Native.getLastError();
+                        errmsg = LIBC.strerror(r);
+
+
+                    }
+
+
+
+
+
+                } catch (LinkageError e) {
+
+
+                    if (PosixAPI.supportsNative()) {
+
+
+                        r = PosixAPI.get().symlink(targetPath,symlinkFile.getAbsolutePath());
+
+
+                    }
+                }
+            }
+            if (r==null) {
+# 1344 "Util1.java.merged"
+                r = new LocalProc(new String[]{
+
+
+
+
+
+                    "ln","-s", targetPath, symlinkPath},
+
+                    new String[0],listener.getLogger(), baseDir).join();
+
+
+
+
+
+            }
+
+
+            if (r!=0)
+                listener.getLogger().println(String.format("ln -s %s %s failed: %d %s",targetPath, symlinkFile, r, errmsg));
+
+
+
+
+
+
+        } catch (IOException e) {
+            PrintStream log = listener.getLogger();
+
+            log.printf("ln %s %s failed%n",targetPath, new File(baseDir, symlinkPath));
+
+
+
+
+            Util.displayIOException(e,listener);
+            e.printStackTrace( log );
+        }
+    }
+
+    public static String resolveSymlink(File link, TaskListener listener) throws InterruptedException, IOException {
+
+
+        return resolveSymlink(link);
+
+
+
+
+
+
+
+    }
+
+
+    public static String resolveSymlink(File link) throws InterruptedException, IOException {
+
+
+        if(Functions.isWindows()) return null;
+        String filename = link.getAbsolutePath();
+
+
+
+
+        try {
+
+            for (int sz=512; sz < 65536; sz*=2) {
+                Memory m = new Memory(sz);
+                int r = LIBC.readlink(filename,m,new NativeLong(sz));
+                if (r<0) {
+                    int err = Native.getLastError();
+                    if (err==22 )
                         return null;
                     throw new IOException("Failed to readlink "+link+" error="+ err+" "+ LIBC.strerror(err));
 
@@ -1113,9 +1256,9 @@ public class Util {
             return PosixAPI.get().readlink(filename);
 
         }
-// 1471 "Util1.java.merged"
+# 1461 "Util1.java.merged"
     }
-// 1484 "Util1.java.merged"
+# 1474 "Util1.java.merged"
     @Deprecated
     public static String encodeRFC2396(String url) {
         try {
@@ -1169,7 +1312,7 @@ public class Util {
 
         if (pos<0) return new File(p+ext);
         else return new File(p.substring(0,pos)+ext);
-// 1548 "Util1.java.merged"
+# 1538 "Util1.java.merged"
     }
 
 

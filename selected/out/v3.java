@@ -1,7 +1,7 @@
-// 1 "Util1.java.merged"
-// 1 "<built-in>"
-// 1 "<command-line>"
-// 1 "Util1.java.merged"
+# 1 "Util1.java.merged"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "Util1.java.merged"
 
 package hudson;
 
@@ -267,7 +267,7 @@ public class Util {
 
 
                str.append(buf,0,len);
-// 274 "Util1.java.merged"
+# 274 "Util1.java.merged"
         r.close();
 
         return str.toString();
@@ -352,14 +352,14 @@ public class Util {
 
 
         }
-// 369 "Util1.java.merged"
+# 369 "Util1.java.merged"
     }
 
     public static void deleteRecursive(File dir) throws IOException {
 
         if(!isSymlink(dir))
             deleteContentsRecursive(dir);
-// 395 "Util1.java.merged"
+# 395 "Util1.java.merged"
         deleteFile(dir);
 
 
@@ -458,7 +458,7 @@ public class Util {
 
             ResourceBundle rb = ResourceBundle.getBundle("/hudson/win32errors");
             return rb.getString("error"+n);
-// 501 "Util1.java.merged"
+# 501 "Util1.java.merged"
     }
 
     public static String getHostName() {
@@ -913,9 +913,9 @@ public class Util {
                 buf.append("&amp;");
 
             else
-// 979 "Util1.java.merged"
+# 979 "Util1.java.merged"
             if(ch==' ') {
-// 989 "Util1.java.merged"
+# 989 "Util1.java.merged"
                 char nextCh = i+1 < text.length() ? text.charAt(i+1) : 0;
                 buf.append(nextCh==' ' ? "&nbsp;" : " ");
 
@@ -953,7 +953,7 @@ public class Util {
                 buf.append("&amp;");
 
             else
-// 1069 "Util1.java.merged"
+# 1069 "Util1.java.merged"
                 buf.append(ch);
         }
 
@@ -963,7 +963,7 @@ public class Util {
 
         return buf.toString();
     }
-// 1086 "Util1.java.merged"
+# 1086 "Util1.java.merged"
     public static void touch(File file) throws IOException {
         new FileOutputStream(file).close();
     }
@@ -989,9 +989,9 @@ public class Util {
 
         if(s==null) return "";
         else return s;
-// 1119 "Util1.java.merged"
+# 1119 "Util1.java.merged"
     }
-// 1129 "Util1.java.merged"
+# 1129 "Util1.java.merged"
     public static String fixEmpty(String s) {
 
         if(s==null || s.length()==0) return null;
@@ -1030,7 +1030,7 @@ public class Util {
     public static <T> Collection<T> fixNull(Collection<T> l) {
         return l!=null ? l : Collections.<T>emptySet();
     }
-// 1175 "Util1.java.merged"
+# 1175 "Util1.java.merged"
     public static String getFileName(String filePath) {
         int idx = filePath.lastIndexOf('\\');
 
@@ -1068,7 +1068,7 @@ public class Util {
 
             if(first) first=false;
             else buf.append(separator);
-// 1220 "Util1.java.merged"
+# 1220 "Util1.java.merged"
             buf.append(s);
         }
         return buf.toString();
@@ -1103,7 +1103,138 @@ public class Util {
 
         return r;
     }
-// 1432 "Util1.java.merged"
+
+
+    public static FileSet createFileSet(File baseDir, String includes, String excludes) {
+        FileSet fs = new FileSet();
+        fs.setDir(baseDir);
+        fs.setProject(new Project());
+        StringTokenizer tokens;
+        tokens = new StringTokenizer(includes,",");
+        while(tokens.hasMoreTokens()) {
+            String token = tokens.nextToken().trim();
+            fs.createInclude().setName(token);
+        }
+        if(excludes!=null) {
+            tokens = new StringTokenizer(excludes,",");
+            while(tokens.hasMoreTokens()) {
+                String token = tokens.nextToken().trim();
+                fs.createExclude().setName(token);
+            }
+        }
+        return fs;
+    }
+    public static FileSet createFileSet(File baseDir, String includes) {
+        return createFileSet(baseDir,includes,null);
+    }
+    public static void createSymlink(File baseDir, String targetPath, String symlinkPath, TaskListener listener) throws InterruptedException {
+
+        if(Functions.isWindows() || NO_SYMLINK) return;
+
+
+
+
+
+
+        try {
+            String errmsg = "";
+            File symlinkFile = new File(baseDir, symlinkPath);
+            if (!symlinkFile.delete() && symlinkFile.exists())
+
+
+
+                new LocalProc(new String[]{"rm","-rf", symlinkPath},new String[0],listener.getLogger(), baseDir).join();
+
+
+
+
+            int r;
+
+
+            if (!SYMLINK_ESCAPEHATCH) {
+                try {
+                    r = LIBC.symlink(targetPath,symlinkFile.getAbsolutePath());
+                    if (r!=0) {
+                        r = Native.getLastError();
+                        errmsg = LIBC.strerror(r);
+
+
+
+
+
+                    }
+
+
+                } catch (LinkageError e) {
+
+
+
+
+
+                        r = PosixAPI.get().symlink(targetPath,symlinkFile.getAbsolutePath());
+# 1338 "Util1.java.merged"
+                }
+
+
+            } else
+
+
+                r = new LocalProc(new String[]{
+
+
+
+
+
+                    "ln","-s", targetPath, symlinkPath},
+
+                    new String[0],listener.getLogger(), baseDir).join();
+# 1361 "Util1.java.merged"
+            if (r!=0)
+                listener.getLogger().println(String.format("ln -s %s %s failed: %d %s",targetPath, symlinkFile, r, errmsg));
+
+
+
+
+
+
+        } catch (IOException e) {
+            PrintStream log = listener.getLogger();
+
+
+
+
+            log.printf("ln %s %s failed\n",targetPath, new File(baseDir, symlinkPath));
+
+            Util.displayIOException(e,listener);
+            e.printStackTrace( log );
+        }
+    }
+
+    public static String resolveSymlink(File link, TaskListener listener) throws InterruptedException, IOException {
+# 1399 "Util1.java.merged"
+        if(Functions.isWindows()) return null;
+        String filename = link.getAbsolutePath();
+
+
+
+
+        try {
+
+            for (int sz=512; sz < 65536; sz*=2) {
+                Memory m = new Memory(sz);
+                int r = LIBC.readlink(filename,m,new NativeLong(sz));
+                if (r<0) {
+                    int err = Native.getLastError();
+                    if (err==22 )
+                        return null;
+                    throw new IOException("Failed to readlink "+link+" error="+ err+" "+ LIBC.strerror(err));
+
+
+
+
+
+
+
                 }
 
                 if (r==sz)
@@ -1129,7 +1260,7 @@ public class Util {
 
 
     }
-// 1484 "Util1.java.merged"
+# 1474 "Util1.java.merged"
     @Deprecated
     public static String encodeRFC2396(String url) {
         try {
@@ -1186,7 +1317,7 @@ public class Util {
 
 
     }
-// 1572 "Util1.java.merged"
+# 1562 "Util1.java.merged"
     public static final FastDateFormat XS_DATETIME_FORMATTER = FastDateFormat.getInstance("yyyy-MM-dd'T'HH:mm:ss'Z'",new SimpleTimeZone(0,"GMT"));
 
     public static final FastDateFormat RFC822_DATETIME_FORMATTER
