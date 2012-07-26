@@ -41,6 +41,8 @@ object Merge extends com.github.paulp.optional.Application {
                 files=filenames.map(filename => if (filename=="") Nil else scala.io.Source.fromFile(new File(_workingDir, filename)).getLines().toList)
                 assert(files.size==numBranches)
                 if (outputWriter != null) {
+                    if (lastFE != allFiles)
+                        write("//#endif")
                     write("//#endif");
                     outputWriter.close()
                 }
@@ -48,7 +50,7 @@ object Merge extends com.github.paulp.optional.Application {
                 outFile.getParentFile.mkdirs
                 outputWriter = new FileWriter(outFile)
                 write("//#if " + allFiles.map("V" + _).mkString(" || "))
-                lastFE=(0 to (numBranches-1)).toSet
+                lastFE=allFiles
             } else {
                 val offsets = v.drop(numBranches)
                 val (line, fileidx) = offsets.zip(0 to (numBranches - 1)).filter(_._1 != "").head

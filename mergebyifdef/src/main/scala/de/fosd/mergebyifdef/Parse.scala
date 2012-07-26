@@ -33,7 +33,7 @@ object Parse extends com.github.paulp.optional.Application {
                 val w=new FileWriter(new File(arg1.getParentFile,arg1.getName+".ast"))
                 w.write(r.toString)
                 w.close()
-            case p.Failure(m, n, _) => println(f + ": \n" + m + " (" + n + ")")
+            case p.Failure(m, n, _) => System.err.println(f + ": \n" + m + " (" + n + ")")
             case p.SplittedParseResult(fe, a, b) => printAST(a, f and fe); printAST(b, f andNot fe)
         }
 
