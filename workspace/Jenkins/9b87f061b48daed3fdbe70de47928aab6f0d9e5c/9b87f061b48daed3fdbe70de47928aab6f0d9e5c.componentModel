@@ -1,0 +1,1473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<de.fhg.iese.save.structure.model.component:SAVEComponentModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:de.fhg.iese.save.structure.model.component="http:///de/fhg/iese/save/structure/model/component/componentModel.ecore" name="9b87f061b48daed3fdbe70de47928aab6f0d9e5c" modelType="componentModel" readableModelType="Structural Model" timeCreated="2012-07-26T11:40:59.276+0200" timeModified="2012-07-26T11:40:59.276+0200">
+  <components xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="9b87f061b48daed3fdbe70de47928aab6f0d9e5c" iD="-1867126862">
+    <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="ui-samples-plugin" iD="-1193061307">
+      <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="src" iD="114777">
+        <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="main" iD="3344430">
+          <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="java" iD="3255447">
+            <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="jenkins" iD="-1712433365">
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="plugins" iD="-475629035">
+                <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="ui_samples" iD="1901667283">
+                  <subComponents name="DropdownList.java" iD="-2112420170"/>
+                  <subComponents name="ProgressBar.java" iD="-2100630785"/>
+                  <subComponents name="AutoCompleteTextBox.java" iD="-1522173073"/>
+                  <subComponents name="UISampleDescriptor.java" iD="-1367981448"/>
+                  <subComponents name="UISample.java" iD="-855743705"/>
+                  <subComponents name="DynamicDropDownListBox.java" iD="-782690520"/>
+                  <subComponents name="ModularizeViewScript.java" iD="108790891"/>
+                  <subComponents name="NotificationBar.java" iD="597033917"/>
+                  <subComponents name="JavaScriptProxy.java" iD="857831844"/>
+                  <subComponents name="Root.java" iD="1091420675"/>
+                  <subComponents name="SyntaxHighlightedTextArea.java" iD="1920317499"/>
+                  <subComponents name="DynamicComboBox.java" iD="2135693481"/>
+                </subComponents>
+              </subComponents>
+            </subComponents>
+          </subComponents>
+        </subComponents>
+      </subComponents>
+    </subComponents>
+    <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="cli" iD="99221">
+      <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="src" iD="114777">
+        <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="main" iD="3344430">
+          <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="java" iD="3255447">
+            <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="hudson" iD="-1206389840">
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="cli" iD="99221">
+                <subComponents name="FullDuplexHttpStream.java" iD="-581556914"/>
+                <subComponents name="SequenceOutputStream.java" iD="-566403933"/>
+                <subComponents name="CliEntryPoint.java" iD="-465332441"/>
+                <subComponents name="Connection.java" iD="-310724217"/>
+                <subComponents name="CLIConnectionFactory.java" iD="-165662183"/>
+                <subComponents name="CLI.java" iD="1670643909"/>
+              </subComponents>
+            </subComponents>
+          </subComponents>
+        </subComponents>
+      </subComponents>
+    </subComponents>
+    <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="msi" iD="109048">
+      <subComponents name="FindJava.java" iD="153025290"/>
+    </subComponents>
+    <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="core" iD="3060244">
+      <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="src" iD="114777">
+        <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="main" iD="3344430">
+          <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="groovy" iD="-1237465469">
+            <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="jenkins" iD="-1712433365">
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="util" iD="3601015">
+                <subComponents name="ServerTcpPort.java" iD="1901499910"/>
+              </subComponents>
+            </subComponents>
+          </subComponents>
+          <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="java" iD="3255447">
+            <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="jenkins" iD="-1712433365">
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="slaves" iD="-899867663">
+                <subComponents name="StandardOutputSwapper.java" iD="1070809785"/>
+              </subComponents>
+              <subComponents name="ExtensionComponentSet.java" iD="-113856415"/>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="model" iD="104070558">
+                <subComponents name="Configuration.java" iD="-1692739921"/>
+                <subComponents name="GlobalNodePropertiesConfiguration.java" iD="-804237273"/>
+                <subComponents name="TransientFingerprintFacetFactory.java" iD="-593598120"/>
+                <subComponents name="GlobalQuietPeriodConfiguration.java" iD="-177191039"/>
+                <subComponents name="InterruptedBuildAction.java" iD="-32202685"/>
+                <subComponents name="Jenkins.java" iD="83715823"/>
+                <subComponents name="GlobalPluginConfiguration.java" iD="113228293"/>
+                <subComponents name="MasterBuildConfiguration.java" iD="309570747"/>
+                <subComponents name="CauseOfInterruption.java" iD="727469568"/>
+                <subComponents name="AbstractTopLevelItem.java" iD="1491231745"/>
+                <subComponents name="GlobalSCMRetryCountConfiguration.java" iD="1720146096"/>
+                <subComponents name="GlobalCloudConfiguration.java" iD="1945980513"/>
+                <subComponents name="FingerprintFacet.java" iD="2065969746"/>
+                <subComponents name="GlobalConfiguration.java" iD="2066971570"/>
+              </subComponents>
+              <subComponents name="YesNoMaybe.java" iD="379036517"/>
+              <subComponents name="ExtensionRefreshException.java" iD="413261746"/>
+              <subComponents name="ClassLoaderReflectionToolkit.java" iD="525589373"/>
+              <subComponents name="PluginSubtypeMarker.java" iD="929372324"/>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="security" iD="949123509">
+                <subComponents name="ApiTokenProperty.java" iD="386304817"/>
+                <subComponents name="ApiTokenFilter.java" iD="1126350766"/>
+              </subComponents>
+              <subComponents name="RestartRequiredException.java" iD="1887885604"/>
+              <subComponents name="InitReactorRunner.java" iD="2110560483"/>
+              <subComponents name="ProxyInjector.java" iD="2132521827"/>
+            </subComponents>
+            <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="hudson" iD="-1206389840">
+              <subComponents name="ExtensionList.java" iD="-2128740728"/>
+              <subComponents name="ResponseHeaderFilter.java" iD="-1990093281"/>
+              <subComponents name="PermalinkList.java" iD="-1830461092"/>
+              <subComponents name="Plugin.java" iD="-1775196590"/>
+              <subComponents name="AbstractMarkupText.java" iD="-1712332082"/>
+              <subComponents name="FeedAdapter.java" iD="-1434977100"/>
+              <subComponents name="WorkspaceSnapshot.java" iD="-1428696052"/>
+              <subComponents name="PluginStrategy.java" iD="-1380153953"/>
+              <subComponents name="Functions.java" iD="-1255328982"/>
+              <subComponents name="Util.java" iD="-1170946333"/>
+              <subComponents name="DependencyRunner.java" iD="-1122059222"/>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="markup" iD="-1081304931">
+                <subComponents name="EbayPolicy.java" iD="-1821455650"/>
+                <subComponents name="MarkupFormatterDescriptor.java" iD="-1623898124"/>
+                <subComponents name="MyspacePolicy.java" iD="-1589471047"/>
+                <subComponents name="MarkupFormatter.java" iD="-1245523037"/>
+                <subComponents name="RawHtmlMarkupFormatter.java" iD="1307059190"/>
+                <subComponents name="HtmlPolicyBuilder2.java" iD="1719941713"/>
+              </subComponents>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="matrix" iD="-1081238986">
+                <subComponents name="NoopMatrixConfigurationSorter.java" iD="-1933615097"/>
+                <subComponents name="TextAxis.java" iD="-1730009097"/>
+                <subComponents name="MatrixProject.java" iD="-1702645555"/>
+                <subComponents name="MatrixConfigurationSorterDescriptor.java" iD="-1611878954"/>
+                <subComponents name="Combination.java" iD="-1552066442"/>
+                <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="listeners" iD="-1218718540">
+                  <subComponents name="MatrixBuildListener.java" iD="1729963908"/>
+                </subComponents>
+                <subComponents name="MatrixBuild.java" iD="-1090736424"/>
+                <subComponents name="Axis.java" iD="-799884636"/>
+                <subComponents name="MatrixAggregatable.java" iD="-578259420"/>
+                <subComponents name="DefaultAxisDescriptor.java" iD="-261974540"/>
+                <subComponents name="LabelAxis.java" iD="-49833392"/>
+                <subComponents name="MatrixRun.java" iD="-38960869"/>
+                <subComponents name="AxisDescriptor.java" iD="87368117"/>
+                <subComponents name="LabelExpAxis.java" iD="453150235"/>
+                <subComponents name="AxisList.java" iD="622482726"/>
+                <subComponents name="JDKAxis.java" iD="670050163"/>
+                <subComponents name="MatrixConfigurationSorter.java" iD="700697605"/>
+                <subComponents name="MatrixAggregator.java" iD="740554107"/>
+                <subComponents name="LinkedLogRotator.java" iD="1986156579"/>
+                <subComponents name="MatrixConfiguration.java" iD="2119337040"/>
+                <subComponents name="Layouter.java" iD="2123165358"/>
+              </subComponents>
+              <subComponents name="Lookup.java" iD="-1013399445"/>
+              <subComponents name="Extension.java" iD="-992582394"/>
+              <subComponents name="FileSystemProvisionerDescriptor.java" iD="-923982241"/>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="search" iD="-906336227">
+                <subComponents name="FixedSet.java" iD="-870556137"/>
+                <subComponents name="SearchItem.java" iD="-758665814"/>
+                <subComponents name="UserSearchProperty.java" iD="-533958051"/>
+                <subComponents name="SearchItems.java" iD="-123573779"/>
+                <subComponents name="CollectionSearchIndex.java" iD="155407065"/>
+                <subComponents name="QuickSilver.java" iD="324580043"/>
+                <subComponents name="SearchableModelObject.java" iD="570637887"/>
+                <subComponents name="Search.java" iD="1083076861"/>
+                <subComponents name="SuggestedItem.java" iD="1606969039"/>
+                <subComponents name="SearchIndexBuilder.java" iD="1629620244"/>
+                <subComponents name="UnionSearchIndex.java" iD="1844522186"/>
+                <subComponents name="SearchIndex.java" iD="2021458971"/>
+                <subComponents name="ParsedQuickSilver.java" iD="2090621180"/>
+              </subComponents>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="slaves" iD="-899867663">
+                <subComponents name="AbstractCloudSlave.java" iD="-2125748799"/>
+                <subComponents name="NodeProperty.java" iD="-2007205362"/>
+                <subComponents name="NodeProvisioner.java" iD="-1974969083"/>
+                <subComponents name="ChannelPinger.java" iD="-1872965981"/>
+                <subComponents name="DelegatingComputerLauncher.java" iD="-1666113848"/>
+                <subComponents name="WorkspaceList.java" iD="-1537659150"/>
+                <subComponents name="NodeDescriptor.java" iD="-1536185036"/>
+                <subComponents name="RetentionStrategy.java" iD="-1476628524"/>
+                <subComponents name="EnvironmentVariablesNodeProperty.java" iD="-1360603702"/>
+                <subComponents name="ComputerRetentionWork.java" iD="-1330009487"/>
+                <subComponents name="ComputerConnectorDescriptor.java" iD="-1300781564"/>
+                <subComponents name="Channels.java" iD="-1207774251"/>
+                <subComponents name="NodeList.java" iD="-1207489563"/>
+                <subComponents name="ComputerListener.java" iD="-1186884074"/>
+                <subComponents name="OfflineCause.java" iD="-983255777"/>
+                <subComponents name="ComputerLauncherFilter.java" iD="-621574574"/>
+                <subComponents name="CommandConnector.java" iD="-459180637"/>
+                <subComponents name="CloudRetentionStrategy.java" iD="-387289047"/>
+                <subComponents name="ComputerConnector.java" iD="-89094733"/>
+                <subComponents name="CommandLauncher.java" iD="288264378"/>
+                <subComponents name="NodeSpecific.java" iD="317522129"/>
+                <subComponents name="EphemeralNode.java" iD="416574470"/>
+                <subComponents name="AbstractCloudImpl.java" iD="860146130"/>
+                <subComponents name="JNLPLauncher.java" iD="961617213"/>
+                <subComponents name="ConnectionActivityMonitor.java" iD="1063894392"/>
+                <subComponents name="SlaveComputer.java" iD="1142447891"/>
+                <subComponents name="SimpleScheduledRetentionStrategy.java" iD="1293377679"/>
+                <subComponents name="NodePropertyDescriptor.java" iD="1309549727"/>
+                <subComponents name="ComputerLauncher.java" iD="1408581290"/>
+                <subComponents name="Cloud.java" iD="1632730320"/>
+                <subComponents name="AbstractCloudComputer.java" iD="1834988343"/>
+                <subComponents name="DumbSlave.java" iD="1965985012"/>
+              </subComponents>
+              <subComponents name="UDPBroadcastFragment.java" iD="-838905035"/>
+              <subComponents name="DNSMultiCast.java" iD="-632191466"/>
+              <subComponents name="LocalPluginManager.java" iD="-422922314"/>
+              <subComponents name="RestrictedSince.java" iD="-405632602"/>
+              <subComponents name="ClassicPluginStrategy.java" iD="-347984915"/>
+              <subComponents name="Launcher.java" iD="-346895867"/>
+              <subComponents name="CloseProofOutputStream.java" iD="-338712168"/>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="lifecycle" iD="-302323233">
+                <subComponents name="WindowsServiceLifecycle.java" iD="-819215347"/>
+                <subComponents name="UnixLifecycle.java" iD="-88398749"/>
+                <subComponents name="WindowsInstallerLink.java" iD="223758118"/>
+                <subComponents name="RestartNotSupportedException.java" iD="684108832"/>
+                <subComponents name="SolarisSMFLifecycle.java" iD="812665276"/>
+                <subComponents name="WindowsSlaveInstaller.java" iD="1463140753"/>
+                <subComponents name="Lifecycle.java" iD="1772084411"/>
+              </subComponents>
+              <subComponents name="RelativePath.java" iD="-295101644"/>
+              <subComponents name="FilePath.java" iD="-278980988"/>
+              <subComponents name="ProxyConfiguration.java" iD="-237045379"/>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="scheduler" iD="-160709840">
+                <subComponents name="Hash.java" iD="-2026914473"/>
+                <subComponents name="CronTab.java" iD="-1112956898"/>
+                <subComponents name="CronTabList.java" iD="422440352"/>
+                <subComponents name="BaseParser.java" iD="1502675285"/>
+              </subComponents>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="os" iD="4185">
+                <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="solaris" iD="-2030679776">
+                  <subComponents name="ZFSInstaller.java" iD="-1870587452"/>
+                  <subComponents name="package-info.java" iD="1477981456"/>
+                  <subComponents name="ZFSProvisioner.java" iD="1660218250"/>
+                </subComponents>
+                <subComponents name="SU.java" iD="-1167390557"/>
+                <subComponents name="PosixAPI.java" iD="-615314578"/>
+                <subComponents name="PosixException.java" iD="526244889"/>
+                <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="windows" iD="1349494008">
+                  <subComponents name="WindowsRemoteFileSystem.java" iD="-1626926575"/>
+                  <subComponents name="WindowsRemoteLauncher.java" iD="-1384962020"/>
+                  <subComponents name="ManagedWindowsServiceAccount.java" iD="-961950103"/>
+                  <subComponents name="ManagedWindowsServiceLauncher.java" iD="1036276116"/>
+                  <subComponents name="ManagedWindowsServiceConnector.java" iD="1254346761"/>
+                </subComponents>
+              </subComponents>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="cli" iD="99221">
+                <subComponents name="LoginCommand.java" iD="-2081977533"/>
+                <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="declarative" iD="-2028504897">
+                  <subComponents name="MethodBinder.java" iD="-1444332902"/>
+                  <subComponents name="CLIRegisterer.java" iD="-1275956203"/>
+                  <subComponents name="OptionHandlerExtension.java" iD="14822715"/>
+                  <subComponents name="CLIMethod.java" iD="1191967844"/>
+                  <subComponents name="package-info.java" iD="1477981456"/>
+                  <subComponents name="CLIResolver.java" iD="1861421151"/>
+                </subComponents>
+                <subComponents name="GroovyCommand.java" iD="-2007757656"/>
+                <subComponents name="UpdateJobCommand.java" iD="-1788928626"/>
+                <subComponents name="CommandDuringBuild.java" iD="-1786085757"/>
+                <subComponents name="MailCommand.java" iD="-1544576815"/>
+                <subComponents name="CloneableCLICommand.java" iD="-1496217213"/>
+                <subComponents name="VersionCommand.java" iD="-1491430862"/>
+                <subComponents name="CopyJobCommand.java" iD="-1450610334"/>
+                <subComponents name="BuildCommand.java" iD="-1360919864"/>
+                <subComponents name="ClientAuthenticationCache.java" iD="-898673882"/>
+                <subComponents name="SetBuildDisplayNameCommand.java" iD="-885275781"/>
+                <subComponents name="SetBuildResultCommand.java" iD="-824335741"/>
+                <subComponents name="InstallPluginCommand.java" iD="-711746296"/>
+                <subComponents name="LogoutCommand.java" iD="-701234140"/>
+                <subComponents name="WhoAmICommand.java" iD="-603644903"/>
+                <subComponents name="DeleteBuildsCommand.java" iD="-602068246"/>
+                <subComponents name="ListChangesCommand.java" iD="-506018273"/>
+                <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="handlers" iD="2069726">
+                  <subComponents name="AbstractProjectOptionHandler.java" iD="-262525273"/>
+                  <subComponents name="TopLevelItemOptionHandler.java" iD="1209379954"/>
+                  <subComponents name="package-info.java" iD="1477981456"/>
+                </subComponents>
+                <subComponents name="HelpCommand.java" iD="53046107"/>
+                <subComponents name="CLICommand.java" iD="290436730"/>
+                <subComponents name="CliManagerImpl.java" iD="709855128"/>
+                <subComponents name="GetJobCommand.java" iD="1073784737"/>
+                <subComponents name="CreateJobCommand.java" iD="1334569211"/>
+                <subComponents name="GroovyshCommand.java" iD="1378234365"/>
+                <subComponents name="package-info.java" iD="1477981456"/>
+                <subComponents name="CliTransportAuthenticator.java" iD="1875999259"/>
+                <subComponents name="InstallToolCommand.java" iD="2055840429"/>
+                <subComponents name="AbstractBuildRangeCommand.java" iD="2120834379"/>
+                <subComponents name="SetBuildDescriptionCommand.java" iD="2136642186"/>
+              </subComponents>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="fsp" iD="102328">
+                <subComponents name="WorkspaceSnapshotSCM.java" iD="-9063359"/>
+              </subComponents>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="org" iD="110937">
+                <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="apache" iD="-1411516477">
+                  <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="tools" iD="110546000">
+                    <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="tar" iD="115226">
+                      <subComponents name="TarInputStream.java" iD="-489646656"/>
+                      <subComponents name="TarOutputStream.java" iD="1010773375"/>
+                    </subComponents>
+                  </subComponents>
+                </subComponents>
+              </subComponents>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="scm" iD="114322">
+                <subComponents name="ChangeLogParser.java" iD="-2093132014"/>
+                <subComponents name="EditType.java" iD="-1585850431"/>
+                <subComponents name="SCMS.java" iD="-1145393265"/>
+                <subComponents name="AutoBrowserHolder.java" iD="-954855552"/>
+                <subComponents name="RepositoryBrowsers.java" iD="-517949680"/>
+                <subComponents name="RepositoryBrowser.java" iD="-494292953"/>
+                <subComponents name="ChangeLogAnnotator.java" iD="-313673763"/>
+                <subComponents name="SCMDescriptor.java" iD="-285295111"/>
+                <subComponents name="PollingResult.java" iD="-221925339"/>
+                <subComponents name="ChangeLogSet.java" iD="-172113897"/>
+                <subComponents name="EmptyChangeLogSet.java" iD="98536074"/>
+                <subComponents name="SCM.java" iD="207756264"/>
+                <subComponents name="NullSCM.java" iD="216186511"/>
+                <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="browsers" iD="384187584">
+                  <subComponents name="QueryBuilder.java" iD="1628061650"/>
+                </subComponents>
+                <subComponents name="SCMRevisionState.java" iD="811657452"/>
+                <subComponents name="NullChangeLogParser.java" iD="1163147065"/>
+                <subComponents name="AbstractScmTagAction.java" iD="1175463600"/>
+              </subComponents>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="init" iD="3237765">
+                <subComponents name="InitReactorListener.java" iD="-1265653153"/>
+                <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="impl" iD="3237013">
+                  <subComponents name="InitialUserContent.java" iD="-1040128101"/>
+                  <subComponents name="GroovyInitScript.java" iD="599734940"/>
+                </subComponents>
+                <subComponents name="InitStrategy.java" iD="334509794"/>
+                <subComponents name="InitMilestone.java" iD="337249189"/>
+                <subComponents name="InitializerFinder.java" iD="768115005"/>
+                <subComponents name="Initializer.java" iD="1026523203"/>
+                <subComponents name="package-info.java" iD="1477981456"/>
+              </subComponents>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="util" iD="3601015">
+                <subComponents name="ClockDifference.java" iD="-2144427814"/>
+                <subComponents name="RobustCollectionConverter.java" iD="-2120428204"/>
+                <subComponents name="PackedMap.java" iD="-2117943647"/>
+                <subComponents name="Futures.java" iD="-2084996907"/>
+                <subComponents name="ProcessTreeRemoting.java" iD="-2072796523"/>
+                <subComponents name="CharacterEncodingFilter.java" iD="-2064837583"/>
+                <subComponents name="NoHomeDir.java" iD="-2025271336"/>
+                <subComponents name="CopyOnWriteMap.java" iD="-2002459916"/>
+                <subComponents name="Scrambler.java" iD="-1947888192"/>
+                <subComponents name="FlushProofOutputStream.java" iD="-1887865436"/>
+                <subComponents name="EnumConverter.java" iD="-1819007066"/>
+                <subComponents name="JVMBuilder.java" iD="-1766507989"/>
+                <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="xstream" iD="-1765730195">
+                  <subComponents name="MapperDelegate.java" iD="-1701388673"/>
+                  <subComponents name="ImmutableListConverter.java" iD="-281308827"/>
+                  <subComponents name="ImmutableSortedSetConverter.java" iD="-143121368"/>
+                  <subComponents name="ImmutableSetConverter.java" iD="789138405"/>
+                  <subComponents name="ImmutableMapConverter.java" iD="1566111583"/>
+                </subComponents>
+                <subComponents name="SubClassGenerator.java" iD="-1756092374"/>
+                <subComponents name="DescribableList.java" iD="-1641391821"/>
+                <subComponents name="UnbufferedBase64InputStream.java" iD="-1592126398"/>
+                <subComponents name="IncompatibleVMDetected.java" iD="-1521338349"/>
+                <subComponents name="ChartUtil.java" iD="-1511410459"/>
+                <subComponents name="RunList.java" iD="-1497346628"/>
+                <subComponents name="StreamTaskListener.java" iD="-1489664948"/>
+                <subComponents name="DescriptorList.java" iD="-1482069736"/>
+                <subComponents name="AWTProblem.java" iD="-1475877756"/>
+                <subComponents name="PersistedList.java" iD="-1390210092"/>
+                <subComponents name="ConsistentHash.java" iD="-1389504795"/>
+                <subComponents name="MaskingClassLoader.java" iD="-1358678416"/>
+                <subComponents name="WriterOutputStream.java" iD="-1337433551"/>
+                <subComponents name="TimeUnit2.java" iD="-1293518300"/>
+                <subComponents name="IOException2.java" iD="-1118647332"/>
+                <subComponents name="ListBoxModel.java" iD="-1108900791"/>
+                <subComponents name="FormFieldValidator.java" iD="-1092320823"/>
+                <subComponents name="StringConverter2.java" iD="-1083151870"/>
+                <subComponents name="ProcessTreeKiller.java" iD="-990201011"/>
+                <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="spring" iD="-895679358">
+                  <subComponents name="BeanBuilder.java" iD="-1411374342"/>
+                  <subComponents name="DefaultRuntimeSpringConfiguration.java" iD="317407507"/>
+                  <subComponents name="DefaultBeanConfiguration.java" iD="1140898272"/>
+                  <subComponents name="BeanConfiguration.java" iD="1702234751"/>
+                  <subComponents name="ClosureScript.java" iD="1832620735"/>
+                  <subComponents name="RuntimeSpringConfiguration.java" iD="1913467732"/>
+                </subComponents>
+                <subComponents name="AdaptedIterator.java" iD="-866073482"/>
+                <subComponents name="ProcessTree.java" iD="-862709928"/>
+                <subComponents name="DaemonThreadFactory.java" iD="-837202967"/>
+                <subComponents name="DualOutputStream.java" iD="-716064440"/>
+                <subComponents name="RingBufferLogHandler.java" iD="-593404593"/>
+                <subComponents name="LRUStringConverter.java" iD="-557082427"/>
+                <subComponents name="CompoundEnumeration.java" iD="-520377399"/>
+                <subComponents name="OneShotEvent.java" iD="-516204053"/>
+                <subComponents name="Secret.java" iD="-413274891"/>
+                <subComponents name="FileVisitor.java" iD="-406029869"/>
+                <subComponents name="RemotingDiagnostics.java" iD="-387213988"/>
+                <subComponents name="DelegatingOutputStream.java" iD="-384059006"/>
+                <subComponents name="ReflectionUtils.java" iD="-375349665"/>
+                <subComponents name="TextFile.java" iD="-287995140"/>
+                <subComponents name="HeapSpaceStringConverter.java" iD="-245283824"/>
+                <subComponents name="AdministrativeError.java" iD="-244156245"/>
+                <subComponents name="Iterators.java" iD="-243171520"/>
+                <subComponents name="MultipartFormDataParser.java" iD="-158398100"/>
+                <subComponents name="ConcurrentHashMapConverter.java" iD="-125884516"/>
+                <subComponents name="EncodingStream.java" iD="-105707822"/>
+                <subComponents name="JNADoublyLoaded.java" iD="-77883970"/>
+                <subComponents name="QueryParameterMap.java" iD="-71166742"/>
+                <subComponents name="Graph.java" iD="-65691305"/>
+                <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="io" iD="3995">
+                  <subComponents name="ParserConfigurator.java" iD="-1157398223"/>
+                  <subComponents name="TarArchiver.java" iD="-916509616"/>
+                  <subComponents name="ReopenableRotatingFileOutputStream.java" iD="121482553"/>
+                  <subComponents name="ArchiverFactory.java" iD="154477355"/>
+                  <subComponents name="ReopenableFileOutputStream.java" iD="469515953"/>
+                  <subComponents name="ZipArchiver.java" iD="501882452"/>
+                  <subComponents name="Archiver.java" iD="614159285"/>
+                </subComponents>
+                <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="jna" iD="106002">
+                  <subComponents name="Options.java" iD="-1849678329"/>
+                  <subComponents name="Shell32.java" iD="-1639800138"/>
+                  <subComponents name="WINNT.java" iD="-1555313533"/>
+                  <subComponents name="WINBASE.java" iD="-1176165032"/>
+                  <subComponents name="Kernel32Utils.java" iD="-793974704"/>
+                  <subComponents name="DotNet.java" iD="-172560751"/>
+                  <subComponents name="GNUCLibrary.java" iD="-60071873"/>
+                  <subComponents name="JnaException.java" iD="147619763"/>
+                  <subComponents name="WINERROR.java" iD="459854233"/>
+                  <subComponents name="Advapi32.java" iD="488471615"/>
+                  <subComponents name="SHELLEXECUTEINFO.java" iD="604174386"/>
+                  <subComponents name="RegistryKey.java" iD="1354806851"/>
+                  <subComponents name="package-info.java" iD="1477981456"/>
+                  <subComponents name="Kernel32.java" iD="1657280457"/>
+                </subComponents>
+                <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="ssh" iD="114813">
+                  <subComponents name="SFTPClient.java" iD="-442325685"/>
+                </subComponents>
+                <subComponents name="CharSpool.java" iD="27875372"/>
+                <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="jelly" iD="101010003">
+                  <subComponents name="MorphTagLibrary.java" iD="-133856100"/>
+                </subComponents>
+                <subComponents name="ArgumentListBuilder.java" iD="195376069"/>
+                <subComponents name="Memoizer.java" iD="221250253"/>
+                <subComponents name="StreamCopyThread.java" iD="226493318"/>
+                <subComponents name="LogTaskListener.java" iD="226692424"/>
+                <subComponents name="InvocationInterceptor.java" iD="280700816"/>
+                <subComponents name="ColorPalette.java" iD="308144909"/>
+                <subComponents name="Protector.java" iD="400460851"/>
+                <subComponents name="EditDistance.java" iD="431697126"/>
+                <subComponents name="Service.java" iD="478829648"/>
+                <subComponents name="AtomicFileWriter.java" iD="523269195"/>
+                <subComponents name="ByteArrayOutputStream2.java" iD="537475045"/>
+                <subComponents name="CompressedFile.java" iD="571285288"/>
+                <subComponents name="IOUtils.java" iD="588499322"/>
+                <subComponents name="FormValidation.java" iD="742708072"/>
+                <subComponents name="ByteBuffer.java" iD="745898813"/>
+                <subComponents name="HeadBufferingStream.java" iD="864522083"/>
+                <subComponents name="IncompatibleServletVersionDetected.java" iD="892414679"/>
+                <subComponents name="ShiftedCategoryAxis.java" iD="927134949"/>
+                <subComponents name="RobustReflectionConverter.java" iD="950130721"/>
+                <subComponents name="CyclicGraphDetector.java" iD="988364746"/>
+                <subComponents name="NullStream.java" iD="992212510"/>
+                <subComponents name="HudsonIsRestarting.java" iD="1012064141"/>
+                <subComponents name="StackedAreaRenderer2.java" iD="1071171242"/>
+                <subComponents name="DecodingStream.java" iD="1122480634"/>
+                <subComponents name="Function1.java" iD="1150114348"/>
+                <subComponents name="KeyedDataStorage.java" iD="1152644146"/>
+                <subComponents name="ExceptionCatchingThreadFactory.java" iD="1156583771"/>
+                <subComponents name="QuotedStringTokenizer.java" iD="1222372647"/>
+                <subComponents name="StreamResource.java" iD="1231508151"/>
+                <subComponents name="CopyOnWriteList.java" iD="1234722876"/>
+                <subComponents name="HudsonFailedToLoad.java" iD="1256377292"/>
+                <subComponents name="InterceptingProxy.java" iD="1348552759"/>
+                <subComponents name="ErrorObject.java" iD="1363637982"/>
+                <subComponents name="AbstractTaskListener.java" iD="1393525738"/>
+                <subComponents name="DirScanner.java" iD="1471619988"/>
+                <subComponents name="HttpResponses.java" iD="1491228539"/>
+                <subComponents name="SequentialExecutionQueue.java" iD="1542789357"/>
+                <subComponents name="ComboBoxModel.java" iD="1555006873"/>
+                <subComponents name="InsufficientPermissionDetected.java" iD="1618792273"/>
+                <subComponents name="ChunkedInputStream.java" iD="1625161703"/>
+                <subComponents name="JenkinsReloadFailed.java" iD="1625628249"/>
+                <subComponents name="TableNestChecker.java" iD="1633430902"/>
+                <subComponents name="ForkOutputStream.java" iD="1685535170"/>
+                <subComponents name="CaseInsensitiveComparator.java" iD="1783172814"/>
+                <subComponents name="DoubleLaunchChecker.java" iD="1791069268"/>
+                <subComponents name="AlternativeUiTextProvider.java" iD="1816576326"/>
+                <subComponents name="Area.java" iD="1857783096"/>
+                <subComponents name="LineEndNormalizingWriter.java" iD="1886845775"/>
+                <subComponents name="NoTempDir.java" iD="1906203085"/>
+                <subComponents name="PluginServletFilter.java" iD="1920644731"/>
+                <subComponents name="ProcessKiller.java" iD="1922291275"/>
+                <subComponents name="HexBinaryConverter.java" iD="1927849505"/>
+                <subComponents name="DataSetBuilder.java" iD="1931940706"/>
+                <subComponents name="ClasspathBuilder.java" iD="1958818087"/>
+                <subComponents name="VariableResolver.java" iD="1964201027"/>
+                <subComponents name="XStream2.java" iD="1969059019"/>
+                <subComponents name="TagCloud.java" iD="1990407114"/>
+                <subComponents name="NoOverlapCategoryAxis.java" iD="2001651936"/>
+                <subComponents name="Digester2.java" iD="2009379236"/>
+                <subComponents name="FormApply.java" iD="2036328219"/>
+                <subComponents name="HudsonIsLoading.java" iD="2089486990"/>
+                <subComponents name="IncompatibleAntVersionDetected.java" iD="2089941241"/>
+                <subComponents name="ChunkedOutputStream.java" iD="2145323064"/>
+              </subComponents>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="model" iD="104070558">
+                <subComponents name="Computer.java" iD="-2126917782"/>
+                <subComponents name="ExternalJob.java" iD="-2108806861"/>
+                <subComponents name="BuildListener.java" iD="-2082113053"/>
+                <subComponents name="AperiodicWork.java" iD="-2051501352"/>
+                <subComponents name="WorkspaceListener.java" iD="-2027570404"/>
+                <subComponents name="PeriodicWork.java" iD="-2022545191"/>
+                <subComponents name="BuildTimelineWidget.java" iD="-2015221294"/>
+                <subComponents name="User.java" iD="-1997029190"/>
+                <subComponents name="HealthReport.java" iD="-1986935563"/>
+                <subComponents name="EnvironmentSpecific.java" iD="-1977989984"/>
+                <subComponents name="ReconfigurableDescribable.java" iD="-1973882307"/>
+                <subComponents name="AbstractProject.java" iD="-1876756562"/>
+                <subComponents name="Node.java" iD="-1870739229"/>
+                <subComponents name="JobProperty.java" iD="-1856374669"/>
+                <subComponents name="PageDecorator.java" iD="-1838326023"/>
+                <subComponents name="AbstractBuild.java" iD="-1814939143"/>
+                <subComponents name="ViewJob.java" iD="-1792829939"/>
+                <subComponents name="JDK.java" iD="-1762389484"/>
+                <subComponents name="BooleanParameterValue.java" iD="-1738384811"/>
+                <subComponents name="DisplayNameListener.java" iD="-1709438908"/>
+                <subComponents name="Job.java" iD="-1595966392"/>
+                <subComponents name="ListView.java" iD="-1581319390"/>
+                <subComponents name="AbstractModelObject.java" iD="-1566404769"/>
+                <subComponents name="ViewDescriptor.java" iD="-1555896783"/>
+                <subComponents name="TimeSeries.java" iD="-1516792703"/>
+                <subComponents name="Executor.java" iD="-1516459854"/>
+                <subComponents name="LabelFinder.java" iD="-1457987093"/>
+                <subComponents name="ItemGroup.java" iD="-1432367559"/>
+                <subComponents name="BuildableItem.java" iD="-1417828662"/>
+                <subComponents name="BuildAuthorizationToken.java" iD="-1381072233"/>
+                <subComponents name="AbstractStatusIcon.java" iD="-1360411528"/>
+                <subComponents name="ItemVisitor.java" iD="-1342745366"/>
+                <subComponents name="ParametersDefinitionProperty.java" iD="-1331434221"/>
+                <subComponents name="DirectoryBrowserSupport.java" iD="-1324402927"/>
+                <subComponents name="EnvironmentContributingAction.java" iD="-1313168494"/>
+                <subComponents name="ResourceList.java" iD="-1310837927"/>
+                <subComponents name="ViewGroup.java" iD="-1271873717"/>
+                <subComponents name="AbstractDescribableImpl.java" iD="-1247156173"/>
+                <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="listeners" iD="-1218718540">
+                  <subComponents name="RunListener.java" iD="-1343462170"/>
+                  <subComponents name="SCMListener.java" iD="-418610028"/>
+                  <subComponents name="ItemListener.java" iD="640138526"/>
+                  <subComponents name="SaveableListener.java" iD="1944430170"/>
+                </subComponents>
+                <subComponents name="DescriptorByNameOwner.java" iD="-1214940733"/>
+                <subComponents name="DownloadService.java" iD="-1189491464"/>
+                <subComponents name="TransientProjectActionFactory.java" iD="-1174333440"/>
+                <subComponents name="StringParameterValue.java" iD="-1162713204"/>
+                <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="labels" iD="-1110416780">
+                  <subComponents name="LabelVisitor.java" iD="-2011067637"/>
+                  <subComponents name="LabelAtom.java" iD="-1867827552"/>
+                  <subComponents name="LabelOperatorPrecedence.java" iD="-626038973"/>
+                  <subComponents name="LabelAssignmentAction.java" iD="-584665650"/>
+                  <subComponents name="LabelExpression.java" iD="740186297"/>
+                  <subComponents name="LabelAtomProperty.java" iD="911334091"/>
+                  <subComponents name="package-info.java" iD="1477981456"/>
+                  <subComponents name="LabelAtomPropertyDescriptor.java" iD="2107866396"/>
+                </subComponents>
+                <subComponents name="Action.java" iD="-1088913105"/>
+                <subComponents name="FileParameterDefinition.java" iD="-1056791771"/>
+                <subComponents name="FreeStyleProject.java" iD="-1042042511"/>
+                <subComponents name="DependecyDeclarer.java" iD="-1010421458"/>
+                <subComponents name="BooleanParameterDefinition.java" iD="-995640943"/>
+                <subComponents name="EnvironmentContributor.java" iD="-971133475"/>
+                <subComponents name="ViewGroupMixIn.java" iD="-933388258"/>
+                <subComponents name="Hudson.java" iD="-922212022"/>
+                <subComponents name="OneOffExecutor.java" iD="-827148791"/>
+                <subComponents name="AsyncAperiodicWork.java" iD="-820165068"/>
+                <subComponents name="FingerprintCleanupThread.java" iD="-695225189"/>
+                <subComponents name="ParameterValue.java" iD="-611439779"/>
+                <subComponents name="AdministrativeMonitor.java" iD="-606696167"/>
+                <subComponents name="TextParameterDefinition.java" iD="-600756266"/>
+                <subComponents name="Actionable.java" iD="-574329067"/>
+                <subComponents name="JobParameterValue.java" iD="-528703328"/>
+                <subComponents name="AbstractCIBase.java" iD="-441552308"/>
+                <subComponents name="ComputerPinger.java" iD="-431941301"/>
+                <subComponents name="TreeView.java" iD="-431581150"/>
+                <subComponents name="AbstractItem.java" iD="-427502480"/>
+                <subComponents name="Queue.java" iD="-425284748"/>
+                <subComponents name="Fingerprint.java" iD="-379375743"/>
+                <subComponents name="UpdateSite.java" iD="-370349067"/>
+                <subComponents name="AllView.java" iD="-360003137"/>
+                <subComponents name="WorkspaceCleanupThread.java" iD="-340261364"/>
+                <subComponents name="Environment.java" iD="-319272014"/>
+                <subComponents name="Jobs.java" iD="-310087921"/>
+                <subComponents name="Item.java" iD="-182747534"/>
+                <subComponents name="BuildableItemWithBuildWrappers.java" iD="-173864744"/>
+                <subComponents name="PasswordParameterValue.java" iD="-150936382"/>
+                <subComponents name="DescriptorVisibilityFilter.java" iD="-145503604"/>
+                <subComponents name="ModifiableItemGroup.java" iD="-128416675"/>
+                <subComponents name="ItemGroupMixIn.java" iD="-112675344"/>
+                <subComponents name="HealthReportingAction.java" iD="-97599779"/>
+                <subComponents name="Failure.java" iD="-71536997"/>
+                <subComponents name="RSS.java" iD="-48122157"/>
+                <subComponents name="ViewProperty.java" iD="-4993461"/>
+                <subComponents name="FileParameterValue.java" iD="89703489"/>
+                <subComponents name="TaskListener.java" iD="98896876"/>
+                <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="queue" iD="107944838">
+                  <subComponents name="QueueSorter.java" iD="-2038495191"/>
+                  <subComponents name="FoldableAction.java" iD="-2030302892"/>
+                  <subComponents name="SubTask.java" iD="-1900078816"/>
+                  <subComponents name="QueueTaskDispatcher.java" iD="-1494289784"/>
+                  <subComponents name="WorkUnitContext.java" iD="-1484068245"/>
+                  <subComponents name="AbstractQueueTask.java" iD="-1262843343"/>
+                  <subComponents name="Timeline.java" iD="-1016086012"/>
+                  <subComponents name="FutureLoad.java" iD="-632596996"/>
+                  <subComponents name="AbstractSubTask.java" iD="-540206494"/>
+                  <subComponents name="Tasks.java" iD="-480227561"/>
+                  <subComponents name="Latch.java" iD="-285291999"/>
+                  <subComponents name="SubTaskContributor.java" iD="-61222993"/>
+                  <subComponents name="Executables.java" iD="184163868"/>
+                  <subComponents name="BackFiller.java" iD="539243214"/>
+                  <subComponents name="MappingWorksheet.java" iD="609723877"/>
+                  <subComponents name="WorkUnit.java" iD="632048272"/>
+                  <subComponents name="LoadPredictor.java" iD="884581743"/>
+                  <subComponents name="AbstractQueueSorterImpl.java" iD="1093265195"/>
+                  <subComponents name="QueueTaskFilter.java" iD="1268527447"/>
+                  <subComponents name="CauseOfBlockage.java" iD="1752247187"/>
+                  <subComponents name="FutureImpl.java" iD="1960832258"/>
+                </subComponents>
+                <subComponents name="Describable.java" iD="116968753"/>
+                <subComponents name="UpdateCenter.java" iD="130551271"/>
+                <subComponents name="AutoCompletionCandidates.java" iD="132178410"/>
+                <subComponents name="Cause.java" iD="160442140"/>
+                <subComponents name="UnprotectedRootAction.java" iD="162163000"/>
+                <subComponents name="TopLevelItem.java" iD="196602883"/>
+                <subComponents name="StreamBuildListener.java" iD="212077955"/>
+                <subComponents name="TopLevelItemDescriptor.java" iD="225405012"/>
+                <subComponents name="PasswordParameterDefinition.java" iD="261073732"/>
+                <subComponents name="ExecutorListener.java" iD="284862302"/>
+                <subComponents name="Label.java" iD="298417009"/>
+                <subComponents name="ManagementLink.java" iD="317140200"/>
+                <subComponents name="ExternalRun.java" iD="322378533"/>
+                <subComponents name="BuildBadgeAction.java" iD="343281690"/>
+                <subComponents name="UserProperty.java" iD="359115493"/>
+                <subComponents name="View.java" iD="385395232"/>
+                <subComponents name="SCMedItem.java" iD="396887190"/>
+                <subComponents name="RunMap.java" iD="403260788"/>
+                <subComponents name="OverallLoadStatistics.java" iD="463437647"/>
+                <subComponents name="RunnerStack.java" iD="537213869"/>
+                <subComponents name="Items.java" iD="550023717"/>
+                <subComponents name="StringParameterDefinition.java" iD="556947130"/>
+                <subComponents name="FreeStyleBuild.java" iD="585926780"/>
+                <subComponents name="LoadStatistics.java" iD="589169820"/>
+                <subComponents name="PersistenceRoot.java" iD="628373092"/>
+                <subComponents name="ResourceActivity.java" iD="649774728"/>
+                <subComponents name="MyViewsProperty.java" iD="708167726"/>
+                <subComponents name="InvisibleAction.java" iD="724064130"/>
+                <subComponents name="SimpleParameterDefinition.java" iD="735221083"/>
+                <subComponents name="TaskAction.java" iD="742182506"/>
+                <subComponents name="Slave.java" iD="775106158"/>
+                <subComponents name="Run.java" iD="835219002"/>
+                <subComponents name="Saveable.java" iD="864314286"/>
+                <subComponents name="UserPropertyDescriptor.java" iD="921662646"/>
+                <subComponents name="AsyncPeriodicWork.java" iD="926669309"/>
+                <subComponents name="ChoiceParameterDefinition.java" iD="931046474"/>
+                <subComponents name="ProminentProjectAction.java" iD="934609212"/>
+                <subComponents name="MultiStageTimeSeries.java" iD="971982972"/>
+                <subComponents name="Api.java" iD="986517515"/>
+                <subComponents name="RunParameterValue.java" iD="1003897618"/>
+                <subComponents name="CauseAction.java" iD="1018701126"/>
+                <subComponents name="ComputerSet.java" iD="1020883710"/>
+                <subComponents name="Descriptor.java" iD="1046321046"/>
+                <subComponents name="Project.java" iD="1058338412"/>
+                <subComponents name="Result.java" iD="1085231016"/>
+                <subComponents name="TaskThread.java" iD="1089471254"/>
+                <subComponents name="StockStatusIcon.java" iD="1102828356"/>
+                <subComponents name="StatusIcon.java" iD="1109746938"/>
+                <subComponents name="PermalinkProjectAction.java" iD="1158338209"/>
+                <subComponents name="UserProperties.java" iD="1175110919"/>
+                <subComponents name="ManageJenkinsAction.java" iD="1203834142"/>
+                <subComponents name="ViewPropertyDescriptor.java" iD="1238044828"/>
+                <subComponents name="ComputerPanelBox.java" iD="1264721283"/>
+                <subComponents name="JobPropertyDescriptor.java" iD="1291888836"/>
+                <subComponents name="ResourceController.java" iD="1352847771"/>
+                <subComponents name="CheckPoint.java" iD="1427527997"/>
+                <subComponents name="LoadBalancer.java" iD="1433241353"/>
+                <subComponents name="RestartListener.java" iD="1437157346"/>
+                <subComponents name="MyView.java" iD="1450763732"/>
+                <subComponents name="Build.java" iD="1477496887"/>
+                <subComponents name="FingerprintMap.java" iD="1510681293"/>
+                <subComponents name="ParametersAction.java" iD="1515231461"/>
+                <subComponents name="LargeText.java" iD="1517909981"/>
+                <subComponents name="FullDuplexHttpChannel.java" iD="1524831417"/>
+                <subComponents name="RootAction.java" iD="1574549229"/>
+                <subComponents name="TransientViewActionFactory.java" iD="1629411040"/>
+                <subComponents name="EnvironmentList.java" iD="1666494260"/>
+                <subComponents name="UsageStatistics.java" iD="1717684929"/>
+                <subComponents name="Resource.java" iD="1733012055"/>
+                <subComponents name="BuildVariableContributor.java" iD="1745609940"/>
+                <subComponents name="RunAction.java" iD="1750736356"/>
+                <subComponents name="BallColor.java" iD="1798985665"/>
+                <subComponents name="JobParameterDefinition.java" iD="1879353894"/>
+                <subComponents name="DependencyGraph.java" iD="1931364098"/>
+                <subComponents name="ResultTrend.java" iD="1981122149"/>
+                <subComponents name="ModelObject.java" iD="1994063645"/>
+                <subComponents name="ParameterDefinition.java" iD="1994214793"/>
+                <subComponents name="RunParameterDefinition.java" iD="2011741940"/>
+                <subComponents name="ProxyView.java" iD="2056357778"/>
+                <subComponents name="TransientComputerActionFactory.java" iD="2077529302"/>
+                <subComponents name="NoFingerprintMatch.java" iD="2146190275"/>
+              </subComponents>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="tasks" iD="110132739">
+                <subComponents name="Fingerprinter.java" iD="-2053797900"/>
+                <subComponents name="CommandInterpreter.java" iD="-1834503978"/>
+                <subComponents name="Mailer.java" iD="-1614425215"/>
+                <subComponents name="BuildWrapper.java" iD="-1563792768"/>
+                <subComponents name="UserNameResolver.java" iD="-1526497271"/>
+                <subComponents name="BuildStepMonitor.java" iD="-1525696507"/>
+                <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="_maven" iD="-1471527167">
+                  <subComponents name="MavenWarningNote.java" iD="-1581278110"/>
+                  <subComponents name="Maven3MojoNote.java" iD="-1531839708"/>
+                  <subComponents name="MavenMojoNote.java" iD="-1355535679"/>
+                  <subComponents name="MavenErrorNote.java" iD="-610084298"/>
+                  <subComponents name="MavenConsoleAnnotator.java" iD="948863477"/>
+                </subComponents>
+                <subComponents name="BuildWrapperDescriptor.java" iD="-1180193135"/>
+                <subComponents name="UserAvatarResolver.java" iD="-1170819397"/>
+                <subComponents name="Publisher.java" iD="-31658647"/>
+                <subComponents name="Notifier.java" iD="-26577985"/>
+                <subComponents name="Builder.java" iD="-10628310"/>
+                <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="test" iD="3557127">
+                  <subComponents name="AbstractTestResultAction.java" iD="-2055045282"/>
+                  <subComponents name="MatrixTestResult.java" iD="-1793805899"/>
+                  <subComponents name="DefaultTestResultParserImpl.java" iD="-1544985642"/>
+                  <subComponents name="MetaTabulatedResult.java" iD="-1028841553"/>
+                  <subComponents name="TestResultParser.java" iD="-279199209"/>
+                  <subComponents name="TabulatedResult.java" iD="-166323702"/>
+                  <subComponents name="TestResultAggregator.java" iD="180390957"/>
+                  <subComponents name="AggregatedTestResultAction.java" iD="662350043"/>
+                  <subComponents name="AggregatedTestResultPublisher.java" iD="881038909"/>
+                  <subComponents name="SimpleCaseResult.java" iD="916779590"/>
+                  <subComponents name="TestObject.java" iD="1315724756"/>
+                  <subComponents name="TestResultProjectAction.java" iD="1689549381"/>
+                  <subComponents name="TestResult.java" iD="2055836598"/>
+                </subComponents>
+                <subComponents name="ArtifactArchiver.java" iD="47850243"/>
+                <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="junit" iD="101488483">
+                  <subComponents name="CaseResult.java" iD="-2011713960"/>
+                  <subComponents name="XMLEntityResolver.java" iD="-1928192795"/>
+                  <subComponents name="JUnitResultArchiver.java" iD="-1875288342"/>
+                  <subComponents name="History.java" iD="-1843326511"/>
+                  <subComponents name="PackageResult.java" iD="-1650946110"/>
+                  <subComponents name="JUnitParser.java" iD="-745426120"/>
+                  <subComponents name="TestAction.java" iD="-118307523"/>
+                  <subComponents name="SuiteResult.java" iD="883864016"/>
+                  <subComponents name="TestResultAction.java" iD="1114650208"/>
+                  <subComponents name="TestObject.java" iD="1315724756"/>
+                  <subComponents name="ClassResult.java" iD="1629474640"/>
+                  <subComponents name="TestDataPublisher.java" iD="1654101989"/>
+                  <subComponents name="TestResult.java" iD="2055836598"/>
+                </subComponents>
+                <subComponents name="BatchFile.java" iD="266310607"/>
+                <subComponents name="Maven.java" iD="655630138"/>
+                <subComponents name="BuildWrappers.java" iD="687294423"/>
+                <subComponents name="Recorder.java" iD="769536935"/>
+                <subComponents name="LogRotator.java" iD="1063895932"/>
+                <subComponents name="MailMessageIdAction.java" iD="1078514916"/>
+                <subComponents name="MailSender.java" iD="1129076313"/>
+                <subComponents name="BuildTrigger.java" iD="1353615483"/>
+                <subComponents name="BuildStepDescriptor.java" iD="1530274332"/>
+                <subComponents name="MailAddressResolver.java" iD="1695398498"/>
+                <subComponents name="BuildStep.java" iD="1727971275"/>
+                <subComponents name="BuildStepCompatibilityLayer.java" iD="1824050442"/>
+                <subComponents name="Shell.java" iD="2006565301"/>
+              </subComponents>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="tools" iD="110546000">
+                <subComponents name="DownloadFromUrlInstaller.java" iD="-2054007750"/>
+                <subComponents name="ToolInstaller.java" iD="-1793561835"/>
+                <subComponents name="ToolLocationTranslator.java" iD="-1736634722"/>
+                <subComponents name="ToolLocationNodeProperty.java" iD="-1440187359"/>
+                <subComponents name="ToolInstallation.java" iD="-964893453"/>
+                <subComponents name="JDKInstaller.java" iD="-203150354"/>
+                <subComponents name="CommandInstaller.java" iD="-94372024"/>
+                <subComponents name="PropertyDescriptor.java" iD="-89879295"/>
+                <subComponents name="ToolDescriptor.java" iD="414683870"/>
+                <subComponents name="InstallSourceProperty.java" iD="787897146"/>
+                <subComponents name="ToolPropertyDescriptor.java" iD="940752969"/>
+                <subComponents name="InstallerTranslator.java" iD="1113427811"/>
+                <subComponents name="ZipExtractionInstaller.java" iD="1181499173"/>
+                <subComponents name="ToolInstallerDescriptor.java" iD="1267841254"/>
+                <subComponents name="ToolProperty.java" iD="1976943160"/>
+              </subComponents>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="views" iD="112205027">
+                <subComponents name="LastStableColumn.java" iD="-1360802338"/>
+                <subComponents name="ViewJobFilter.java" iD="-1261598859"/>
+                <subComponents name="LastDurationColumn.java" iD="-1128073371"/>
+                <subComponents name="ViewsTabBarDescriptor.java" iD="-1080560150"/>
+                <subComponents name="ListViewColumn.java" iD="-793363540"/>
+                <subComponents name="DefaultMyViewsTabBar.java" iD="-717171002"/>
+                <subComponents name="JobColumn.java" iD="-706820014"/>
+                <subComponents name="ViewsTabBar.java" iD="-674079463"/>
+                <subComponents name="BuildButtonColumn.java" iD="-635947793"/>
+                <subComponents name="DefaultViewsTabBar.java" iD="-496473798"/>
+                <subComponents name="GlobalDefaultViewConfiguration.java" iD="166664370"/>
+                <subComponents name="ListViewColumnDescriptor.java" iD="185661629"/>
+                <subComponents name="MyViewsTabBar.java" iD="402476773"/>
+                <subComponents name="MyViewsTabBarDescriptor.java" iD="1170741430"/>
+                <subComponents name="WeatherColumn.java" iD="1210196923"/>
+                <subComponents name="LastFailureColumn.java" iD="1525904795"/>
+                <subComponents name="StatusColumn.java" iD="1735312573"/>
+                <subComponents name="LastSuccessColumn.java" iD="1843188098"/>
+              </subComponents>
+              <subComponents name="URLConnectionDecorator.java" iD="305838423"/>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="logging" iD="342281684">
+                <subComponents name="WeakLogHandler.java" iD="-875643033"/>
+                <subComponents name="LogRecorderManager.java" iD="-265760934"/>
+                <subComponents name="LogRecorder.java" iD="-74759421"/>
+              </subComponents>
+              <subComponents name="ExtensionPoint.java" iD="358238132"/>
+              <subComponents name="TcpSlaveAgentListener.java" iD="424070082"/>
+              <subComponents name="LauncherDecorator.java" iD="482101834"/>
+              <subComponents name="AboutJenkins.java" iD="500489948"/>
+              <subComponents name="ExtensionListView.java" iD="541895011"/>
+              <subComponents name="PluginManager.java" iD="616228139"/>
+              <subComponents name="EnvVars.java" iD="667773132"/>
+              <subComponents name="MarkupText.java" iD="757826384"/>
+              <subComponents name="Proc.java" iD="858130447"/>
+              <subComponents name="FileSystemProvisioner.java" iD="872328142"/>
+              <subComponents name="CopyOnWrite.java" iD="881705146"/>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="security" iD="949123509">
+                <subComponents name="LegacyAuthorizationStrategy.java" iD="-2102392574"/>
+                <subComponents name="DeferredCreationLdapAuthoritiesPopulator.java" iD="-1558890813"/>
+                <subComponents name="FederatedLoginServiceUserProperty.java" iD="-1538974251"/>
+                <subComponents name="PermissionGroup.java" iD="-1515108875"/>
+                <subComponents name="LDAPSecurityRealm.java" iD="-1502092291"/>
+                <subComponents name="AuthorizationStrategy.java" iD="-1348425127"/>
+                <subComponents name="GroupDetails.java" iD="-1208495934"/>
+                <subComponents name="ACL.java" iD="-1126687845"/>
+                <subComponents name="SparseACL.java" iD="-986172965"/>
+                <subComponents name="ChainedServletFilter.java" iD="-572688152"/>
+                <subComponents name="PAMSecurityRealm.java" iD="-453977710"/>
+                <subComponents name="ProjectMatrixAuthorizationStrategy.java" iD="-176429581"/>
+                <subComponents name="AccessControlled.java" iD="-2627373"/>
+                <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="csrf" iD="3064089">
+                  <subComponents name="CrumbExclusion.java" iD="-1382529166"/>
+                  <subComponents name="CrumbIssuer.java" iD="-1308720687"/>
+                  <subComponents name="DefaultCrumbIssuer.java" iD="-1131115022"/>
+                  <subComponents name="GlobalCrumbIssuerConfiguration.java" iD="-819177152"/>
+                  <subComponents name="CrumbFilter.java" iD="-223229838"/>
+                  <subComponents name="CrumbIssuerDescriptor.java" iD="4691106"/>
+                </subComponents>
+                <subComponents name="ContainerAuthentication.java" iD="18342956"/>
+                <subComponents name="LegacySecurityRealm.java" iD="230056895"/>
+                <subComponents name="FederatedLoginService.java" iD="326647989"/>
+                <subComponents name="GlobalSecurityConfiguration.java" iD="377261074"/>
+                <subComponents name="AuthenticationManagerProxy.java" iD="430177260"/>
+                <subComponents name="SidACL.java" iD="534303305"/>
+                <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="captcha" iD="552568047">
+                  <subComponents name="CaptchaSupportDescriptor.java" iD="-517945631"/>
+                  <subComponents name="CaptchaSupport.java" iD="1541842640"/>
+                </subComponents>
+                <subComponents name="RememberMeServicesProxy.java" iD="553711898"/>
+                <subComponents name="UserDetailsServiceProxy.java" iD="651166101"/>
+                <subComponents name="AbstractPasswordBasedSecurityRealm.java" iD="757052236"/>
+                <subComponents name="AuthorizationMatrixProperty.java" iD="864984502"/>
+                <subComponents name="GlobalMatrixAuthorizationStrategy.java" iD="957041341"/>
+                <subComponents name="AccessDeniedHandlerImpl.java" iD="979169242"/>
+                <subComponents name="UserMayOrMayNotExistException.java" iD="1002041634"/>
+                <subComponents name="HudsonFilter.java" iD="1016330482"/>
+                <subComponents name="AuthenticationProcessingFilter2.java" iD="1127275958"/>
+                <subComponents name="NoopFilter.java" iD="1144267883"/>
+                <subComponents name="HudsonPrivateSecurityRealm.java" iD="1193010622"/>
+                <subComponents name="SecurityRealm.java" iD="1221413910"/>
+                <subComponents name="PermissionScope.java" iD="1306237760"/>
+                <subComponents name="HudsonAuthenticationEntryPoint.java" iD="1323324180"/>
+                <subComponents name="UnwrapSecurityExceptionFilter.java" iD="1349568769"/>
+                <subComponents name="HttpSessionContextIntegrationFilter2.java" iD="1443962878"/>
+                <subComponents name="InvalidatableUserDetails.java" iD="1555451122"/>
+                <subComponents name="AccessDeniedException2.java" iD="1571490211"/>
+                <subComponents name="Permission.java" iD="1630871862"/>
+                <subComponents name="SecurityMode.java" iD="1755204226"/>
+                <subComponents name="CliAuthenticator.java" iD="1906713938"/>
+                <subComponents name="FullControlOnceLoggedInAuthorizationStrategy.java" iD="1920712079"/>
+                <subComponents name="NotSerilizableSecurityContext.java" iD="1953883665"/>
+                <subComponents name="BasicAuthenticationFilter.java" iD="2010453831"/>
+                <subComponents name="TokenBasedRememberMeServices2.java" iD="2032350864"/>
+              </subComponents>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="console" iD="951510988">
+                <subComponents name="ConsoleAnnotatorFactory.java" iD="-2142144000"/>
+                <subComponents name="ConsoleNote.java" iD="-1747522148"/>
+                <subComponents name="HudsonExceptionNote.java" iD="-1204113857"/>
+                <subComponents name="ConsoleLogFilter.java" iD="-1149438848"/>
+                <subComponents name="HyperlinkNote.java" iD="-596348051"/>
+                <subComponents name="AnnotatedLargeText.java" iD="690134613"/>
+                <subComponents name="PlainTextConsoleOutputStream.java" iD="1002756868"/>
+                <subComponents name="ConsoleAnnotationOutputStream.java" iD="1419506526"/>
+                <subComponents name="package-info.java" iD="1477981456"/>
+                <subComponents name="ConsoleAnnotator.java" iD="1478742656"/>
+                <subComponents name="ConsoleAnnotationDescriptor.java" iD="1607493392"/>
+                <subComponents name="LineTransformationOutputStream.java" iD="1724296135"/>
+                <subComponents name="ExpandableDetailsNote.java" iD="2008024101"/>
+                <subComponents name="UrlAnnotator.java" iD="2103154840"/>
+              </subComponents>
+              <subComponents name="ExtensionFinder.java" iD="957581248"/>
+              <subComponents name="BulkChange.java" iD="965390211"/>
+              <subComponents name="ExpressionFactory2.java" iD="973759109"/>
+              <subComponents name="XmlFile.java" iD="1068682130"/>
+              <subComponents name="PluginWrapper.java" iD="1141739525"/>
+              <subComponents name="DescriptorExtensionList.java" iD="1154713687"/>
+              <subComponents name="PluginFirstClassLoader.java" iD="1162066487"/>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="diagnosis" iD="1196993894">
+                <subComponents name="HudsonHomeDiskUsageChecker.java" iD="-1816485222"/>
+                <subComponents name="HudsonHomeDiskUsageMonitor.java" iD="-1157336043"/>
+                <subComponents name="NullIdDescriptorMonitor.java" iD="-640834180"/>
+                <subComponents name="ReverseProxySetupMonitor.java" iD="15287388"/>
+                <subComponents name="OldDataMonitor.java" iD="81269148"/>
+                <subComponents name="MemoryUsageMonitor.java" iD="1076016587"/>
+                <subComponents name="TooManyJobsButNoView.java" iD="1720745287"/>
+              </subComponents>
+              <subComponents name="Indenter.java" iD="1200169708"/>
+              <subComponents name="Platform.java" iD="1291451666"/>
+              <subComponents name="UDPBroadcastThread.java" iD="1309006779"/>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="node_monitors" iD="1315903083">
+                <subComponents name="ArchitectureMonitor.java" iD="-2141786690"/>
+                <subComponents name="AbstractNodeMonitorDescriptor.java" iD="-1981052544"/>
+                <subComponents name="DiskSpaceMonitor.java" iD="-1436930924"/>
+                <subComponents name="ClockMonitor.java" iD="-1274987591"/>
+                <subComponents name="DiskSpaceMonitorDescriptor.java" iD="-875894875"/>
+                <subComponents name="AbstractDiskSpaceMonitor.java" iD="-311659118"/>
+                <subComponents name="ResponseTimeMonitor.java" iD="1884366489"/>
+                <subComponents name="SwapSpaceMonitor.java" iD="1929958238"/>
+                <subComponents name="NodeMonitor.java" iD="1933558765"/>
+                <subComponents name="MonitorMarkedNodeOffline.java" iD="1996494602"/>
+                <subComponents name="TemporarySpaceMonitor.java" iD="2077099680"/>
+              </subComponents>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="widgets" iD="1340338468">
+                <subComponents name="RenderOnDemandClosure.java" iD="-145831574"/>
+                <subComponents name="Widget.java" iD="699268577"/>
+                <subComponents name="BuildHistoryWidget.java" iD="843583419"/>
+                <subComponents name="HistoryWidget.java" iD="1557065965"/>
+              </subComponents>
+              <subComponents name="WebAppMain.java" iD="1380548575"/>
+              <subComponents name="StructuredForm.java" iD="1451394320"/>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="triggers" iD="1503093808">
+                <subComponents name="TimerTrigger.java" iD="-1353629998"/>
+                <subComponents name="SafeTimerTask.java" iD="-588095832"/>
+                <subComponents name="Triggers.java" iD="72388810"/>
+                <subComponents name="SCMTrigger.java" iD="437445546"/>
+                <subComponents name="TriggerDescriptor.java" iD="469092094"/>
+                <subComponents name="Trigger.java" iD="494581549"/>
+              </subComponents>
+              <subComponents name="AbortException.java" iD="1527075334"/>
+              <subComponents name="Main.java" iD="1707387788"/>
+              <subComponents name="ExtensionComponent.java" iD="1717912807"/>
+            </subComponents>
+            <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="org" iD="110937">
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="acegisecurity" iD="1774417242">
+                <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="providers" iD="-547570921">
+                  <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="ldap" iD="3317276">
+                    <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="authenticator" iD="1815001064">
+                      <subComponents name="BindAuthenticator2.java" iD="1918097513"/>
+                    </subComponents>
+                  </subComponents>
+                </subComponents>
+              </subComponents>
+            </subComponents>
+          </subComponents>
+        </subComponents>
+        <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="test" iD="3557127">
+          <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="java" iD="3255447">
+            <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="jenkins" iD="-1712433365">
+              <subComponents name="RemotingJarSignatureTest.java" iD="-308696013"/>
+            </subComponents>
+            <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="hudson" iD="-1206389840">
+              <subComponents name="BulkChangeTest.java" iD="-1742895343"/>
+              <subComponents name="LauncherTest.java" iD="-1687121773"/>
+              <subComponents name="FunctionsTest.java" iD="-1309155528"/>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="matrix" iD="-1081238986">
+                <subComponents name="CombinationTest.java" iD="98336388"/>
+              </subComponents>
+              <subComponents name="EnvVarsTest.java" iD="-933202982"/>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="search" iD="-906336227">
+                <subComponents name="SearchTest.java" iD="202374027"/>
+              </subComponents>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="slaves" iD="-899867663">
+                <subComponents name="NodeListTest.java" iD="1365312115"/>
+              </subComponents>
+              <subComponents name="FilePathTest.java" iD="-277576302"/>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="scheduler" iD="-160709840">
+                <subComponents name="CronTabEventualityTest.java" iD="-1038684782"/>
+                <subComponents name="CronTabDayOfWeekLocaleTest.java" iD="-966610887"/>
+                <subComponents name="CronTabTest.java" iD="466399788"/>
+              </subComponents>
+              <subComponents name="UtilTest.java" iD="-47387023"/>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="os" iD="4185">
+                <subComponents name="DCOMSandbox.java" iD="790006427"/>
+                <subComponents name="SUTester.java" iD="1868119204"/>
+              </subComponents>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="util" iD="3601015">
+                <subComponents name="SecretTest.java" iD="-2041529469"/>
+                <subComponents name="SubClassGeneratorTest.java" iD="-1919134664"/>
+                <subComponents name="CopyOnWriteListTest.java" iD="-1811795126"/>
+                <subComponents name="FormValidationTest.java" iD="-1750519690"/>
+                <subComponents name="CopyOnWriteMapTest.java" iD="-1625384446"/>
+                <subComponents name="LineEndNormalizingWriterTest.java" iD="-1524167459"/>
+                <subComponents name="CyclicGraphDetectorTest.java" iD="-1415799848"/>
+                <subComponents name="ConsistentHashTest.java" iD="-1388696205"/>
+                <subComponents name="Point.java" iD="-1080793515"/>
+                <subComponents name="IteratorsTest.java" iD="-730058674"/>
+                <subComponents name="PackedMapTest.java" iD="-648227025"/>
+                <subComponents name="XStreamTest.java" iD="-528029349"/>
+                <subComponents name="QuotedStringTokenizerTest.java" iD="-74493259"/>
+                <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="io" iD="3995">
+                  <subComponents name="TarArchiverTest.java" iD="-56830626"/>
+                  <subComponents name="ReopenableRotatingFileOutputStreamTest.java" iD="873380295"/>
+                  <subComponents name="ZipArchiverTest.java" iD="1318528354"/>
+                </subComponents>
+                <subComponents name="ArgumentListBuilderTest.java" iD="351803987"/>
+                <subComponents name="ProcessTreeTest.java" iD="903150694"/>
+                <subComponents name="RobustReflectionConverterTest.java" iD="1880305839"/>
+                <subComponents name="XStream2Test.java" iD="1996253273"/>
+              </subComponents>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="model" iD="104070558">
+                <subComponents name="TaskActionTest.java" iD="-1790453128"/>
+                <subComponents name="BallColorTest.java" iD="-1658658737"/>
+                <subComponents name="FingerprintTest.java" iD="-1483089905"/>
+                <subComponents name="TimeSeriesTest.java" iD="-1189888753"/>
+                <subComponents name="ViewTest.java" iD="-1029510354"/>
+                <subComponents name="AutoCompleteSeederTest.java" iD="-278995475"/>
+                <subComponents name="ResourceListTest.java" iD="-255905817"/>
+                <subComponents name="StubJob.java" iD="-19117290"/>
+                <subComponents name="DisplayNameListenerTest.java" iD="719492946"/>
+                <subComponents name="LoadStatisticsTest.java" iD="794732458"/>
+                <subComponents name="UpdateCenterTest.java" iD="838669173"/>
+                <subComponents name="AbstractItemTest.java" iD="1081175422"/>
+                <subComponents name="BuildStatusSummaryTest.java" iD="1212810093"/>
+                <subComponents name="JobTest.java" iD="2063886678"/>
+              </subComponents>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="tasks" iD="110132739">
+                <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="_maven" iD="-1471527167">
+                  <subComponents name="Maven3MojoNoteTest.java" iD="1099176498"/>
+                </subComponents>
+                <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="test" iD="3557127">
+                  <subComponents name="TestObjectTest.java" iD="-319970078"/>
+                </subComponents>
+                <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="junit" iD="101488483">
+                  <subComponents name="SuiteResultTest.java" iD="-2119329058"/>
+                  <subComponents name="TestResultTest.java" iD="-1176954428"/>
+                  <subComponents name="CaseResultTest.java" iD="-944434330"/>
+                </subComponents>
+              </subComponents>
+              <subComponents name="ProxyConfigurationTest.java" iD="417874955"/>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="console" iD="951510988">
+                <subComponents name="UrlAnnotatorTest.java" iD="1215946150"/>
+              </subComponents>
+              <subComponents name="MarkupTextTest.java" iD="1684384862"/>
+              <subComponents name="ChannelTestCase.java" iD="2004429824"/>
+            </subComponents>
+            <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="foo" iD="102203">
+              <subComponents name="Animal.java" iD="-1764532951"/>
+              <subComponents name="Driver.java" iD="-1419260291"/>
+              <subComponents name="Cute.java" iD="-281492190"/>
+              <subComponents name="Cat.java" iD="64438223"/>
+              <subComponents name="Dog.java" iD="975219241"/>
+              <subComponents name="Banana.java" iD="1739658592"/>
+            </subComponents>
+          </subComponents>
+        </subComponents>
+      </subComponents>
+    </subComponents>
+    <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="test" iD="3557127">
+      <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="src" iD="114777">
+        <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="main" iD="3344430">
+          <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="java" iD="3255447">
+            <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="jenkins" iD="-1712433365">
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="model" iD="104070558">
+                <subComponents name="JenkinsAdaptor.java" iD="1363041302"/>
+              </subComponents>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="security" iD="949123509">
+                <subComponents name="ApiTokenPropertyTest.java" iD="1472715711"/>
+              </subComponents>
+            </subComponents>
+            <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="org" iD="110937">
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="jvnet" iD="101518150">
+                <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="hudson" iD="-1206389840">
+                  <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="test" iD="3557127">
+                    <subComponents name="HudsonPageCreator.java" iD="-2054748989"/>
+                    <subComponents name="JenkinsRecipe.java" iD="-1921058175"/>
+                    <subComponents name="TouchBuilder.java" iD="-1801385015"/>
+                    <subComponents name="ExtractChangeLogSet.java" iD="-1720747562"/>
+                    <subComponents name="SequenceLock.java" iD="-1533758311"/>
+                    <subComponents name="ClosureExecuterAction.java" iD="-1531734185"/>
+                    <subComponents name="JenkinsComputerConnectorTester.java" iD="-1530036918"/>
+                    <subComponents name="GroovyHudsonTestCase.java" iD="-1320174694"/>
+                    <subComponents name="TestCrumbIssuer.java" iD="-1311598973"/>
+                    <subComponents name="FailureBuilder.java" iD="-1238512236"/>
+                    <subComponents name="PluginAutomaticTestBuilder.java" iD="-1187060492"/>
+                    <subComponents name="ExtractChangeLogParser.java" iD="-899952397"/>
+                    <subComponents name="ExtractResourceSCM.java" iD="-739456905"/>
+                    <subComponents name="MockBuilder.java" iD="-672575020"/>
+                    <subComponents name="NoListenerConfiguration.java" iD="-509119196"/>
+                    <subComponents name="WarExploder.java" iD="-489485620"/>
+                    <subComponents name="TestEnvironment.java" iD="-322150300"/>
+                    <subComponents name="WithoutJenkins.java" iD="-36420713"/>
+                    <subComponents name="CaptureEnvironmentBuilder.java" iD="10636983"/>
+                    <subComponents name="TestBuilder.java" iD="13373660"/>
+                    <subComponents name="TestExtensionLoader.java" iD="35989413"/>
+                    <subComponents name="JenkinsMatchers.java" iD="55474158"/>
+                    <subComponents name="HudsonTestCase.java" iD="96200328"/>
+                    <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="junit" iD="101488483">
+                      <subComponents name="FailedTest.java" iD="-1828297578"/>
+                      <subComponents name="GroupedTest.java" iD="993860309"/>
+                    </subComponents>
+                    <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="rhino" iD="108484713">
+                      <subComponents name="JavaScriptDebugger.java" iD="-374420073"/>
+                      <subComponents name="CallStackFrame.java" iD="-207721790"/>
+                      <subComponents name="package-info.java" iD="1477981456"/>
+                    </subComponents>
+                    <subComponents name="SingleFileSCM.java" iD="250494444"/>
+                    <subComponents name="FakeLauncher.java" iD="490767536"/>
+                    <subComponents name="DefaultConstructorChecker.java" iD="543275241"/>
+                    <subComponents name="TestExtension.java" iD="598474296"/>
+                    <subComponents name="PretendSlave.java" iD="866784984"/>
+                    <subComponents name="LenientRunnable.java" iD="910468785"/>
+                    <subComponents name="SleepBuilder.java" iD="962508641"/>
+                    <subComponents name="JenkinsRule.java" iD="1022642259"/>
+                    <subComponents name="ExtractResourceWithChangesSCM.java" iD="1059301878"/>
+                    <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="recipes" iD="1082416922">
+                      <subComponents name="WithPluginManager.java" iD="-1988698991"/>
+                      <subComponents name="Recipe.java" iD="-673546025"/>
+                      <subComponents name="WithPlugin.java" iD="-146565716"/>
+                      <subComponents name="PresetData.java" iD="107474972"/>
+                      <subComponents name="LocalData.java" iD="1259365712"/>
+                      <subComponents name="package-info.java" iD="1477981456"/>
+                    </subComponents>
+                    <subComponents name="HudsonHomeLoader.java" iD="1138762840"/>
+                    <subComponents name="JavaNetReverseProxy.java" iD="1369632222"/>
+                    <subComponents name="package-info.java" iD="1477981456"/>
+                    <subComponents name="ComputerConnectorTester.java" iD="1630580148"/>
+                    <subComponents name="UnstableBuilder.java" iD="1666681950"/>
+                    <subComponents name="FakeChangeLogSCM.java" iD="1720143463"/>
+                    <subComponents name="ThreadPoolImpl.java" iD="1734625503"/>
+                    <subComponents name="JellyTestSuiteBuilder.java" iD="1755562642"/>
+                    <subComponents name="TestPluginManager.java" iD="2145162589"/>
+                    <subComponents name="TemporaryDirectoryAllocator.java" iD="2146047222"/>
+                  </subComponents>
+                </subComponents>
+              </subComponents>
+            </subComponents>
+          </subComponents>
+        </subComponents>
+        <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="test" iD="3557127">
+          <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="junit4" iD="-1148843141">
+            <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="org" iD="110937">
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="jvnet" iD="101518150">
+                <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="hudson" iD="-1206389840">
+                  <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="main" iD="3344430">
+                    <subComponents name="UseRecipesWithJenkinsRuleTest.java" iD="-1027495675"/>
+                  </subComponents>
+                </subComponents>
+              </subComponents>
+            </subComponents>
+          </subComponents>
+          <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="java" iD="3255447">
+            <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="jenkins" iD="-1712433365">
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="model" iD="104070558">
+                <subComponents name="JenkinsTest.java" iD="1934534781"/>
+              </subComponents>
+            </subComponents>
+            <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="hudson" iD="-1206389840">
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="markup" iD="-1081304931">
+                <subComponents name="MarkupFormatterTest.java" iD="895916849"/>
+              </subComponents>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="matrix" iD="-1081238986">
+                <subComponents name="MatrixProjectDependencyTest.java" iD="-2142231984"/>
+                <subComponents name="MatrixTest.java" iD="-551479918"/>
+                <subComponents name="MatrixConfigurationSorterTest.java" iD="1435538067"/>
+              </subComponents>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="search" iD="-906336227">
+                <subComponents name="SearchTest.java" iD="202374027"/>
+              </subComponents>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="slaves" iD="-899867663">
+                <subComponents name="EnvironmentVariableNodePropertyTest.java" iD="-1831598611"/>
+                <subComponents name="NodeProvisionerTest.java" iD="-815488109"/>
+                <subComponents name="ComputerConnectorTest.java" iD="151831873"/>
+                <subComponents name="NodePropertyTest.java" iD="1017189404"/>
+                <subComponents name="DummyCloudImpl.java" iD="1103402904"/>
+                <subComponents name="JNLPLauncherTest.java" iD="1327663051"/>
+                <subComponents name="NodeCanTakeTaskTest.java" iD="1887573625"/>
+              </subComponents>
+              <subComponents name="HtmlEscapeTest.java" iD="-183559769"/>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="scm" iD="114322">
+                <subComponents name="ScmTest.java" iD="1152562422"/>
+              </subComponents>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="bugs" iD="3035892">
+                <subComponents name="DateConversionTest.java" iD="-2126715569"/>
+                <subComponents name="LoginRedirectTest.java" iD="-1344108626"/>
+                <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="seasar" iD="-906335318">
+                  <subComponents name="package-info.java" iD="1477981456"/>
+                  <subComponents name="Operation2174Test.java" iD="1752510608"/>
+                </subComponents>
+                <subComponents name="JnlpAccessWithSecuredHudsonTest.java" iD="1843605725"/>
+              </subComponents>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="util" iD="3601015">
+                <subComponents name="ProcessTreeKillerTest.java" iD="-1850827301"/>
+                <subComponents name="ArgumentListBuilder2Test.java" iD="-793684383"/>
+                <subComponents name="AlternativeUiTextProviderTest.java" iD="119865172"/>
+                <subComponents name="FormFieldValidatorTest.java" iD="1545127511"/>
+              </subComponents>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="maven" iD="103670784">
+                <subComponents name="MavenSnapshotTriggerTest.java" iD="-2085438454"/>
+                <subComponents name="MavenOptsTest.java" iD="-2055082872"/>
+                <subComponents name="MavenMultiModuleTest.java" iD="-1648588039"/>
+                <subComponents name="MavenModuleSetTest.java" iD="-1582112888"/>
+                <subComponents name="Maven3BuildTest.java" iD="-1419836435"/>
+                <subComponents name="MavenMultiModuleTestIncremental.java" iD="-1165402985"/>
+                <subComponents name="AbortedMavenBuildTest.java" iD="-1162168351"/>
+                <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="reporters" iD="-353322457">
+                  <subComponents name="SurefireArchiverTest.java" iD="-738893384"/>
+                  <subComponents name="MavenSiteArchiverTest.java" iD="992114993"/>
+                  <subComponents name="MavenMailerTest.java" iD="1480009540"/>
+                </subComponents>
+                <subComponents name="MavenBuildTest.java" iD="-249378832"/>
+                <subComponents name="MavenBuildSurefireFailedTest.java" iD="-233422296"/>
+                <subComponents name="MavenArgumentInterceptorTest.java" iD="24820022"/>
+                <subComponents name="MavenEmptyModuleTest.java" iD="515911781"/>
+                <subComponents name="ModuleDependencyLocator.java" iD="520524678"/>
+                <subComponents name="MavenJellyTest.java" iD="956032128"/>
+                <subComponents name="MavenProjectTest.java" iD="1095822565"/>
+                <subComponents name="RedeployPublisherTest.java" iD="1887963249"/>
+              </subComponents>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="model" iD="104070558">
+                <subComponents name="HelpLinkTest.java" iD="-1576425544"/>
+                <subComponents name="UserTestCase.java" iD="-1575678472"/>
+                <subComponents name="ExternalRunTest.java" iD="-1467526733"/>
+                <subComponents name="RunTest.java" iD="-1453387192"/>
+                <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="listeners" iD="-1218718540">
+                  <subComponents name="ItemListenerTest.java" iD="-1376497876"/>
+                </subComponents>
+                <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="labels" iD="-1110416780">
+                  <subComponents name="LabelAtomPropertyTest.java" iD="994954841"/>
+                  <subComponents name="LabelExpressionTest.java" iD="1504552263"/>
+                </subComponents>
+                <subComponents name="GetEnvironmentOutsideBuildTest.java" iD="-1088874067"/>
+                <subComponents name="ViewTest.java" iD="-1029510354"/>
+                <subComponents name="ViewPropertyTest.java" iD="-745930279"/>
+                <subComponents name="HudsonTest.java" iD="-718617256"/>
+                <subComponents name="ParametersTest.java" iD="-653633143"/>
+                <subComponents name="AbstractProjectTest.java" iD="-609238596"/>
+                <subComponents name="DisplayNameTest.java" iD="-63761242"/>
+                <subComponents name="UserPropertyTest.java" iD="-60161677"/>
+                <subComponents name="UsageStatisticsTest.java" iD="22598479"/>
+                <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="queue" iD="107944838">
+                  <subComponents name="LoadPredictorTest.java" iD="-708335875"/>
+                  <subComponents name="WideExecutionTest.java" iD="900523150"/>
+                </subComponents>
+                <subComponents name="ComputerSetTest.java" iD="119018764"/>
+                <subComponents name="SimpleJobTest.java" iD="173628456"/>
+                <subComponents name="QueueTest.java" iD="503849602"/>
+                <subComponents name="DirectoryBrowserSupportTest.java" iD="601331615"/>
+                <subComponents name="DependencyGraphTest.java" iD="655050512"/>
+                <subComponents name="AbortedFreeStyleBuildTest.java" iD="903138043"/>
+                <subComponents name="ManagementLinkTest.java" iD="1250085366"/>
+                <subComponents name="ExecutorTest.java" iD="1260474560"/>
+                <subComponents name="DownloadServiceTest.java" iD="1464263174"/>
+                <subComponents name="FreeStyleProjectTest.java" iD="1730667007"/>
+                <subComponents name="JobPropertyTest.java" iD="1950275585"/>
+                <subComponents name="ApiTest.java" iD="2024563609"/>
+                <subComponents name="JobTest.java" iD="2063886678"/>
+              </subComponents>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="pages" iD="106426937">
+                <subComponents name="SystemConfigurationTestCase.java" iD="-583178116"/>
+              </subComponents>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="tasks" iD="110132739">
+                <subComponents name="LogRotatorTest.java" iD="-1343228278"/>
+                <subComponents name="FingerprinterTest.java" iD="-1187725566"/>
+                <subComponents name="MavenTest.java" iD="-1083555000"/>
+                <subComponents name="MailAddressResolverTest.java" iD="-481162640"/>
+                <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="test" iD="3557127">
+                  <subComponents name="TrivialTestResultAction.java" iD="-1218440233"/>
+                  <subComponents name="TestResultExtensionTest.java" iD="-145161021"/>
+                  <subComponents name="TrivialTestResultRecorder.java" iD="848018511"/>
+                  <subComponents name="TrivialTestResult.java" iD="1647220333"/>
+                </subComponents>
+                <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="junit" iD="101488483">
+                  <subComponents name="JUnitResultArchiverTest.java" iD="-1886901512"/>
+                  <subComponents name="CaseResultTest.java" iD="-944434330"/>
+                  <subComponents name="TestResultLinksTest.java" iD="-762750455"/>
+                  <subComponents name="TestResultPublishingTest.java" iD="-145478319"/>
+                  <subComponents name="JUnitParserTest.java" iD="182560838"/>
+                  <subComponents name="HistoryTest.java" iD="519967327"/>
+                </subComponents>
+                <subComponents name="MailSenderTest.java" iD="140759783"/>
+                <subComponents name="ShellTest.java" iD="924069955"/>
+                <subComponents name="EnvVarsInConfigTasksTest.java" iD="985782565"/>
+                <subComponents name="UserAvatarResolverTest.java" iD="1216557641"/>
+                <subComponents name="BuildTriggerTest.java" iD="1463559177"/>
+                <subComponents name="MailerTest.java" iD="1678408719"/>
+                <subComponents name="ArtifactArchiverTest.java" iD="2106014353"/>
+              </subComponents>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="tools" iD="110546000">
+                <subComponents name="ToolLocationTest.java" iD="-1313828506"/>
+                <subComponents name="ToolLocationNodePropertyTest.java" iD="-1247292241"/>
+                <subComponents name="JDKInstallerTest.java" iD="1463604732"/>
+              </subComponents>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="views" iD="112205027">
+                <subComponents name="ListViewColumnTest.java" iD="1491392186"/>
+              </subComponents>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="logging" iD="342281684">
+                <subComponents name="LogRecorderManagerTest.java" iD="-1872108696"/>
+              </subComponents>
+              <subComponents name="ProcTest.java" iD="738310557"/>
+              <subComponents name="ExtensionListTest.java" iD="934792086"/>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="security" iD="949123509">
+                <subComponents name="CliAuthenticationTest.java" iD="-1348935749"/>
+                <subComponents name="LoginTest.java" iD="-924782806"/>
+                <subComponents name="PermissionGroupTest.java" iD="-917531517"/>
+                <subComponents name="ExtendedReadPermissionTest.java" iD="-728621995"/>
+                <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="csrf" iD="3064089">
+                  <subComponents name="DefaultCrumbIssuerTest.java" iD="-1390111232"/>
+                </subComponents>
+                <subComponents name="PAMSecurityRealmTest.java" iD="1899106720"/>
+                <subComponents name="HudsonPrivateSecurityRealmTest.java" iD="1902323660"/>
+              </subComponents>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="console" iD="951510988">
+                <subComponents name="ConsoleAnnotatorTest.java" iD="-1354570866"/>
+                <subComponents name="ExceptionAnnotationTest.java" iD="290077013"/>
+                <subComponents name="UrlAnnotatorTest.java" iD="1215946150"/>
+              </subComponents>
+              <subComponents name="ExceptionTest.java" iD="994812164"/>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="diagnosis" iD="1196993894">
+                <subComponents name="HudsonHomeDiskUsageMonitorTest.java" iD="-2028031325"/>
+                <subComponents name="TooManyJobsButNoViewTest.java" iD="238998229"/>
+              </subComponents>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="node_monitors" iD="1315903083">
+                <subComponents name="DiskSpaceMonitorDescriptorTest.java" iD="559996467"/>
+              </subComponents>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="triggers" iD="1503093808">
+                <subComponents name="SCMTriggerTest.java" iD="-745451592"/>
+              </subComponents>
+              <subComponents name="PluginManagerTest.java" iD="1600825529"/>
+              <subComponents name="UDPBroadcastThreadTest.java" iD="1714935625"/>
+              <subComponents name="ClassicPluginStrategyTest.java" iD="1871494779"/>
+              <subComponents name="ExtensionFinderTest.java" iD="2060843214"/>
+            </subComponents>
+            <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="lib" iD="107770">
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="hudson" iD="-1206389840">
+                <subComponents name="ListScmBrowsersTest.java" iD="1355883945"/>
+                <subComponents name="ActionsTest.java" iD="1842189334"/>
+              </subComponents>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="layout" iD="-1109721697">
+                <subComponents name="RenderOnDemandTest.java" iD="1109003123"/>
+              </subComponents>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="form" iD="3149625">
+                <subComponents name="DropdownListTest.java" iD="-2022372156"/>
+                <subComponents name="PasswordTest.java" iD="-1620635656"/>
+                <subComponents name="NameRefTest.java" iD="-998399125"/>
+                <subComponents name="RepeatableTest.java" iD="-853448098"/>
+                <subComponents name="AdvancedButtonTest.java" iD="-214942529"/>
+                <subComponents name="ValidateButtonTest.java" iD="1048577355"/>
+                <subComponents name="RepeatablePropertyTest.java" iD="1072582921"/>
+                <subComponents name="EnumSetTest.java" iD="1295880690"/>
+                <subComponents name="RowVisibilityGroupTest.java" iD="1344042048"/>
+                <subComponents name="ExpandableTextboxTest.java" iD="1774296009"/>
+              </subComponents>
+            </subComponents>
+            <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="org" iD="110937">
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="jvnet" iD="101518150">
+                <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="hudson" iD="-1206389840">
+                  <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="main" iD="3344430">
+                    <subComponents name="AppTest.java" iD="648969074"/>
+                  </subComponents>
+                </subComponents>
+              </subComponents>
+            </subComponents>
+            <subComponents name="CoreJellyTest.java" iD="1789948884"/>
+            <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="scripts" iD="1926515581">
+              <subComponents name="package-info.java" iD="1477981456"/>
+              <subComponents name="BehaviorTest.java" iD="2131220001"/>
+            </subComponents>
+          </subComponents>
+        </subComponents>
+      </subComponents>
+    </subComponents>
+    <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="maven-plugin" iD="2124822570">
+      <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="src" iD="114777">
+        <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="main" iD="3344430">
+          <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="java" iD="3255447">
+            <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="hudson" iD="-1206389840">
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="maven" iD="103670784">
+                <subComponents name="MavenModule.java" iD="-2101372818"/>
+                <subComponents name="MavenTestDataPublisher.java" iD="-1887250672"/>
+                <subComponents name="ModuleName.java" iD="-1790708498"/>
+                <subComponents name="ModuleDependency.java" iD="-1732008658"/>
+                <subComponents name="MavenComputerListener.java" iD="-1716763253"/>
+                <subComponents name="MavenBuildProxy.java" iD="-1706048454"/>
+                <subComponents name="TransferListenerImpl.java" iD="-1583900538"/>
+                <subComponents name="Maven3Builder.java" iD="-1378872494"/>
+                <subComponents name="MavenBuildProxy2.java" iD="-1288559362"/>
+                <subComponents name="NeedsFullBuildAction.java" iD="-1261690675"/>
+                <subComponents name="PomInfo.java" iD="-1206470839"/>
+                <subComponents name="Maven3ProcessFactory.java" iD="-1123444286"/>
+                <subComponents name="MavenBuilder.java" iD="-1096090603"/>
+                <subComponents name="Maven2Builder.java" iD="-1085469487"/>
+                <subComponents name="FilteredChangeLogSet.java" iD="-994388288"/>
+                <subComponents name="MavenReporters.java" iD="-917531746"/>
+                <subComponents name="ProcessCache.java" iD="-570174670"/>
+                <subComponents name="MavenEmbedderRequest.java" iD="-540360359"/>
+                <subComponents name="PluginImpl.java" iD="-469980782"/>
+                <subComponents name="MavenBuild.java" iD="-405194782"/>
+                <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="reporters" iD="-353322457">
+                  <subComponents name="ReportAction.java" iD="-2045844645"/>
+                  <subComponents name="MavenJavadocArchiver.java" iD="-1930989142"/>
+                  <subComponents name="ReportCollector.java" iD="-1883106356"/>
+                  <subComponents name="BuildInfoRecorder.java" iD="-701273845"/>
+                  <subComponents name="MavenArtifactArchiver.java" iD="-482028936"/>
+                  <subComponents name="SurefireAggregatedReport.java" iD="-303598047"/>
+                  <subComponents name="AbstractMavenJavadocArchiver.java" iD="-74380376"/>
+                  <subComponents name="SurefireArchiver.java" iD="55571882"/>
+                  <subComponents name="MavenArtifactRecord.java" iD="145325943"/>
+                  <subComponents name="MavenMailer.java" iD="151675190"/>
+                  <subComponents name="MavenSiteArchiver.java" iD="1075687843"/>
+                  <subComponents name="MavenAbstractArtifactRecord.java" iD="1123052277"/>
+                  <subComponents name="MavenAggregatedArtifactRecord.java" iD="1406973554"/>
+                  <subComponents name="MavenTestJavadocArchiver.java" iD="1459548124"/>
+                  <subComponents name="MavenFingerprinter.java" iD="1606227103"/>
+                  <subComponents name="SurefireReport.java" iD="1911485478"/>
+                  <subComponents name="MavenArtifact.java" iD="2109986696"/>
+                </subComponents>
+                <subComponents name="MavenAggregatedReport.java" iD="-196065119"/>
+                <subComponents name="MavenBuildInformation.java" iD="-90752516"/>
+                <subComponents name="RedeployPublisher.java" iD="-80944925"/>
+                <subComponents name="MavenProjectActionBuilder.java" iD="-27209682"/>
+                <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="util" iD="3601015">
+                  <subComponents name="ExecutionEventLogger.java" iD="-2028152237"/>
+                </subComponents>
+                <subComponents name="AbstractMavenBuilder.java" iD="198538259"/>
+                <subComponents name="MavenProcessFactory.java" iD="337567647"/>
+                <subComponents name="MavenProbeAction.java" iD="406129418"/>
+                <subComponents name="AggregatableAction.java" iD="434265935"/>
+                <subComponents name="SplittableBuildListener.java" iD="562543095"/>
+                <subComponents name="MavenArgumentInterceptorAction.java" iD="673694034"/>
+                <subComponents name="ExecutedMojo.java" iD="981109967"/>
+                <subComponents name="PluginName.java" iD="1075846151"/>
+                <subComponents name="AbstractMavenProcessFactory.java" iD="1090194913"/>
+                <subComponents name="MavenReportInfo.java" iD="1167197720"/>
+                <subComponents name="MavenUtil.java" iD="1262173656"/>
+                <subComponents name="AbstractMavenProject.java" iD="1267504981"/>
+                <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="local_repo" iD="1303650875">
+                  <subComponents name="PerExecutorLocalRepositoryLocator.java" iD="343206292"/>
+                  <subComponents name="PerJobLocalRepositoryLocator.java" iD="461761284"/>
+                  <subComponents name="LocalRepositoryLocatorDescriptor.java" iD="495507349"/>
+                  <subComponents name="DefaultLocalRepositoryLocator.java" iD="1596394947"/>
+                  <subComponents name="LocalRepositoryLocator.java" iD="1909868676"/>
+                </subComponents>
+                <subComponents name="MavenModuleSetBuild.java" iD="1319379874"/>
+                <subComponents name="AbstractMavenBuild.java" iD="1419614048"/>
+                <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="settings" iD="1434631832">
+                  <subComponents name="GlobalMavenSettingsProvider.java" iD="-2079431575"/>
+                  <subComponents name="MavenSettingsProvider.java" iD="1671262822"/>
+                  <subComponents name="SettingsProviderUtils.java" iD="1937176104"/>
+                </subComponents>
+                <subComponents name="MavenVersionCallable.java" iD="1493031968"/>
+                <subComponents name="MojoInfo.java" iD="1679693584"/>
+                <subComponents name="MavenReporterDescriptor.java" iD="1703588522"/>
+                <subComponents name="MavenReporter.java" iD="1709574617"/>
+                <subComponents name="MavenModuleSet.java" iD="1821694842"/>
+                <subComponents name="UnbuiltModuleAction.java" iD="1932111454"/>
+                <subComponents name="EmbedderLoggerImpl.java" iD="1976251933"/>
+              </subComponents>
+            </subComponents>
+          </subComponents>
+        </subComponents>
+        <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="test" iD="3557127">
+          <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="java" iD="3255447">
+            <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="hudson" iD="-1206389840">
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="maven" iD="103670784">
+                <subComponents name="ExecutedMojoTest.java" iD="-1207574947"/>
+                <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="reporters" iD="-353322457">
+                  <subComponents name="SurefireArchiverUnitTest.java" iD="530379284"/>
+                </subComponents>
+                <subComponents name="MavenModuleTest.java" iD="-108133764"/>
+              </subComponents>
+              <subComponents xsi:type="de.fhg.iese.save.structure.model.component:SAVEComponentSubSystem" name="model" iD="104070558">
+                <subComponents name="MockHelper.java" iD="1322983117"/>
+              </subComponents>
+            </subComponents>
+          </subComponents>
+        </subComponents>
+      </subComponents>
+    </subComponents>
+  </components>
+</de.fhg.iese.save.structure.model.component:SAVEComponentModel>
